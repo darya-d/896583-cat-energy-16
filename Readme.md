@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Darya Drazdouskaya](https://up.htmlacademy.ru/adaptive/16/user/896583).
-* Наставник: `Неизвестно`.
+* Наставник: [Ярослав Шевцов](https://htmlacademy.ru/profile/redx).
 
 ---
 
