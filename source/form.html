@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <a class="page-header__logo-link" href="index.html">
+        <img class="page-header__logo-img" src="http://placehold.it/150x100" width="" height="" alt="Логотип магазина Кэт Энерджи">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list reset-list">
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__item-link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="site-list__item site-list__item--active">
+              <a class="site-list__item-link" href="#">Подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+      <h2 class="page-main__title">Подбор программы</h2>
+      <section class="profile">
+        <p class="profile__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="form profile__form" action="#" method="post">
+          <p class="form__item form__item--name">
+            <label class="" for="name">Имя:<span>*</span></label>
+            <input class="" type="text" id="name" name="name" placeholder="Барсик>">
+          </p>
+          <p class="form__item form__item--weight">
+            <label class="" for="weight">Вес (кг):<span>*</span></label>
+            <input class="" type="text" id="weight" name="weight" placeholder="7">
+          </p>
+          <p class="form__item form__item--age">
+            <label class="" for="age">Возраст (лет):</label>
+            <input class="" type="text" id="age" name="age" placeholder="7">
+          </p>
+          <!-- Выбор программы -->
+          <fieldset class="program-choice">
+          <legend>Сетка:</legend>
+              <ul class="program-choice__list reset-list">
+                <li class="program-choice__item">
+                  <input class="visually-hidden" type="radio" name="" id="" value="" checked>
+                  <label for="" checked>Похудение</label>
+                </li>
+                <li class="program-choice__item">
+                  <input class="visually-hidden" type="radio" name="" id="" value="">
+                  <label for="">Набор массы</label>
+                </li>
+                <li class="program-choice__item">
+                  <input class="visually-hidden" type="radio" name="" id="" value="">
+                  <label for="">Не знаю</label>
+                </li>
+              </ul>
+          </fieldset>
+      </section>
+
+      <section class="contacts-info">
+
+      </section>
+      <section class="comments">
+
+      </section>
+      <section class="addit">
+
+      </section>
+
+      <section class="address">
+        <h2 class="address__title visually-hidden">Наш адрес</h2>
+        <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="address__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1552167273582" width="1440" height="416" style="border:0" allowfullscreen></iframe>
+      </section>
+    </main>
+
+    <footer class="footer">
+    <h2 class="footer__title">Мы в социальных сетях</h2>
+      <div class="social">
+        <ul class="social__list reset-list">
+          <li class="social__item social__item--vk">
+            <a href="#">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social__item social__item--inst">
+            <a href="#">
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="social__item social__item--fb">
+            <a href="#">
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+        </ul>
+        <div class="academy">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__link">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__logo-link">
+            <img src="http://placehold.it/150x100" alt="Логотип HTML Academy" class="academy__logo">
+          </a>
+        </div>
+      </div>
+    </footer>
