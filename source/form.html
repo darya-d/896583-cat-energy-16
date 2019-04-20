@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -10,10 +11,10 @@
       <a class="page-header__logo-link" href="index.html">
         <img class="page-header__logo-img" src="http://placehold.it/150x100" width="" height="" alt="Логотип магазина Кэт Энерджи">
       </a>
+      <button class="burger page-header__burger" type="button">Открыть меню</button>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list reset-list">
+          <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a class="site-list__item-link" href="index.html">Главная</a>
             </li>
@@ -29,52 +30,104 @@
     </header>
 
     <main class="page-main">
-      <h2 class="page-main__title">Подбор программы</h2>
-      <section class="profile">
-        <p class="profile__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <form class="form profile__form" action="#" method="post">
-          <p class="form__item form__item--name">
-            <label class="" for="name">Имя:<span>*</span></label>
-            <input class="" type="text" id="name" name="name" placeholder="Барсик>">
-          </p>
-          <p class="form__item form__item--weight">
-            <label class="" for="weight">Вес (кг):<span>*</span></label>
-            <input class="" type="text" id="weight" name="weight" placeholder="7">
-          </p>
-          <p class="form__item form__item--age">
-            <label class="" for="age">Возраст (лет):</label>
-            <input class="" type="text" id="age" name="age" placeholder="7">
-          </p>
-          <!-- Выбор программы -->
-          <fieldset class="program-choice">
-          <legend>Сетка:</legend>
-              <ul class="program-choice__list reset-list">
-                <li class="program-choice__item">
-                  <input class="visually-hidden" type="radio" name="" id="" value="" checked>
-                  <label for="" checked>Похудение</label>
+      <h1 class="page-main__title">Подбор программы</h1>
+        <h2 class="visually-hidden">Анкета для вашего кота</h2>
+        <form class="program-form" action="#" method="post">
+          <p class="program-form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
+          <!-- Profile of the cat -->
+          <fieldset class="program-form__item program-form__about-cat about-cat">
+            <legend class="visually-hidden">Данные о вашем коте</legend>
+            <div class="about-cat__wrapper">
+              <label class="about-cat__label about-cat__label-name" for="name">Имя:<span>*</span></label>
+              <input class="about-cat__input about-cat__input-name" type="text" id="name" name="name" placeholder="Барсик">
+            </div>
+            <div class="about-cat__wrapper">
+              <label class="about-cat__label about-cat__label-weight" for="weight">Вес (кг):<span>*</span></label>
+              <input class="about-cat__input about-cat__input-weight" type="text" id="weight" name="weight" placeholder="7">
+            </div>
+            <div class="about-cat__wrapper">
+              <label class="about-cat__label about-cat__label-age" for="age">Возраст (лет):</label>
+              <input class="about-cat__input about-cat__input-age" type="text" id="age" name="age" placeholder="7">
+            </div>
+          </fieldset>
+
+          <!-- Purpose of the program -->
+          <fieldset class="program-form__item program-form__purpose purpose">
+            <legend class="visually-hidden">Цель</legend>
+            <ul class="purpose__list">
+              <li class="purpose__item">
+                <input class="purpose__item-slim purpose__radio visually-hidden" type="radio" name="slim" id="slim" value="slim" checked>
+                <label class="purpose__radio-label" for="slim" checked>Похудение</label>
+              </li>
+              <li class="purpose__item">
+                <input class="purpose__item-weight purpose__radio visually-hidden" type="radio" name="weight" id="weight" value="weight">
+                <label class="purpose__radio-label" for="weight">Набор массы</label>
+              </li>
+              <li class="purpose__item">
+                <input class="purpose__item-advice purpose__radio visually-hidden" type="radio" name="advice" id="advice" value="advice">
+                <label class="purpose__radio-label" for="advice">Не знаю (нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <!-- Users contacts -->
+          <fieldset class="program-form__item program-form__contacts contacts">
+            <legend class="contacts__title program-form__item-title">Контактные данные (владельца кота)</legend>
+            <div class="contacts__wrapper">
+              <label class="program-form__label contacts__label contacts__label-email">E-mail:<span class="contacts__label-asterisk">*</span></label>
+              <input class="contacts__input contacts__input-email" type="text" name="client-name" placeholder="KUKLACHEV@GMAIL.COM">
+            </div>
+
+            <div class="contacts__wrapper">
+              <label class="program-form__label contacts__label contacts__label-phone ">Телефон:<span class="contacts__label-asterisk">*</span></label>
+              <input class="contacts__input contacts__input-phone" type="text" name="phone" placeholder="8 (960) 900-60-90">
+            </div>
+          </fieldset>
+
+          <!-- Users comments -->
+          <fieldset class="program-form__item program-form__comment comment">
+            <legend class="comment__title program-form__item-title" for="user-comment">Комментарий</legend>
+            <div class="comment__wrapper">
+              <textarea class="comment__textarea" name="user-comment" id="user-comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Additional info -->
+          <fieldset class="program-form__item program-form__additional-info additional-info">
+            <legend class="additional-info__title program-form__item-title">Дополнительно</legend>
+            <ul class="additional-info__list">
+                <!-- Sweetener -->
+                <li class="additional-info__item">
+                  <input class="additional-info__item-sweetener additional-info__checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked>
+                  <label class="additional-info__checkbox-label" for="sweetener" checked>Сахарозаменитель</label>
                 </li>
-                <li class="program-choice__item">
-                  <input class="visually-hidden" type="radio" name="" id="" value="">
-                  <label for="">Набор массы</label>
+                <!-- Water -->
+                <li class="additional-info__item">
+                  <input class="additional-info__item-water  additional-info__checkbox visually-hidden" type="checkbox" name="water" id="water" value="water">
+                  <label class="additional-info__checkbox-label" for="water">Питьевая вода</label>
                 </li>
-                <li class="program-choice__item">
-                  <input class="visually-hidden" type="radio" name="" id="" value="">
-                  <label for="">Не знаю</label>
+                <!-- Milk -->
+                <li class="additional-info__item">
+                  <input class="additional-info__item-milk  additional-info__checkbox visually-hidden" type="checkbox" name="milk" id="milk" value="milk">
+                  <label class="additional-info__checkbox-label" for="milk">Молоко</label>
+                </li>
+                <!-- Vitamins -->
+                <li class="additional-info__item">
+                  <input class="additional-info__item-vitamins  additional-info__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins" value="vitamins">
+                  <label class="additional-info__checkbox-label" for="vitamins">Витамины</label>
                 </li>
               </ul>
           </fieldset>
-      </section>
 
-      <section class="contacts-info">
+        </form>
+        <!-- Send a request button -->
+        <div class="program-form__button-wrapper">
+            <button class="program-form__button-submit button" type="submit">Отправить заявку</button>
+            <p class="program-form__text"><span class="program-form__text-asterisk">*</span> — Обязательные поля</p>
+        </div>
 
-      </section>
-      <section class="comments">
-
-      </section>
-      <section class="addit">
-
-      </section>
-
+        <!-- Address -->
       <section class="address">
         <h2 class="address__title visually-hidden">Наш адрес</h2>
         <p class="address__slogan">Приглашаем к сотрудничеству дилеров!</p>
@@ -83,31 +136,35 @@
       </section>
     </main>
 
-    <footer class="footer">
-    <h2 class="footer__title">Мы в социальных сетях</h2>
-      <div class="social">
-        <ul class="social__list reset-list">
-          <li class="social__item social__item--vk">
-            <a href="#">
-              <span class="visually-hidden">Вконтакте</span>
-            </a>
-          </li>
-          <li class="social__item social__item--inst">
-            <a href="#">
-              <span class="visually-hidden">Инстаграм</span>
-            </a>
-          </li>
-          <li class="social__item social__item--fb">
-            <a href="#">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-        </ul>
-        <div class="academy">
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__link">HTML Academy</a>
-          <a href="https://htmlacademy.ru/intensive/adaptive" class="academy__logo-link">
-            <img src="http://placehold.it/150x100" alt="Логотип HTML Academy" class="academy__logo">
+    <footer class="page-footer">
+      <h2 class="page-footer__title visually-hidden">Мы в социальных сетях</h2>
+        <!-- Social media icons -->
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item social__item--vk">
+              <a href="#">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item social__item--inst">
+              <a href="#">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
+            <li class="social__item social__item--fb">
+              <a href="#">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- Academy copyright -->
+        <div class="copyright">
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__company-name">HTML Academy</a>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
+            <img src="http://placehold.it/150x100" alt="Логотип HTML Academy" class="copyright__logo">
           </a>
         </div>
-      </div>
     </footer>
+  </body>
+</html>
