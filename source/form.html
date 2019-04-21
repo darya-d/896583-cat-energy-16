@@ -36,24 +36,24 @@
           <p class="program-form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
 
           <!-- Profile of the cat -->
-          <fieldset class="program-form__item program-form__about-cat about-cat">
+          <fieldset class="program-form__item about-cat">
             <legend class="visually-hidden">Данные о вашем коте</legend>
             <div class="about-cat__wrapper">
-              <label class="about-cat__label about-cat__label-name" for="name">Имя:<span>*</span></label>
-              <input class="about-cat__input about-cat__input-name" type="text" id="name" name="name" placeholder="Барсик">
+              <label class="program-form__label about-cat__label about-cat__label-name" for="name">Имя:*</label>
+              <input class="program-form__input about-cat__input about-cat__input-name" type="text" id="name" name="name" placeholder="Барсик">
             </div>
             <div class="about-cat__wrapper">
-              <label class="about-cat__label about-cat__label-weight" for="weight">Вес (кг):<span>*</span></label>
-              <input class="about-cat__input about-cat__input-weight" type="text" id="weight" name="weight" placeholder="7">
+              <label class="program-form__label about-cat__label about-cat__label-weight" for="weight">Вес (кг):*</label>
+              <input class="program-form__input about-cat__input about-cat__input-weight" type="text" id="weight" name="weight" placeholder="7">
             </div>
             <div class="about-cat__wrapper">
-              <label class="about-cat__label about-cat__label-age" for="age">Возраст (лет):</label>
-              <input class="about-cat__input about-cat__input-age" type="text" id="age" name="age" placeholder="7">
+              <label class="program-form__label about-cat__label about-cat__label-age" for="age">Возраст (лет):</label>
+              <input class="program-form__input about-cat__input about-cat__input-age" type="text" id="age" name="age" placeholder="7">
             </div>
           </fieldset>
 
           <!-- Purpose of the program -->
-          <fieldset class="program-form__item program-form__purpose purpose">
+          <fieldset class="program-form__item purpose">
             <legend class="visually-hidden">Цель</legend>
             <ul class="purpose__list">
               <li class="purpose__item">
@@ -72,21 +72,21 @@
           </fieldset>
 
           <!-- Users contacts -->
-          <fieldset class="program-form__item program-form__contacts contacts">
+          <fieldset class="program-form__item contacts">
             <legend class="contacts__title program-form__item-title">Контактные данные (владельца кота)</legend>
             <div class="contacts__wrapper">
-              <label class="program-form__label contacts__label contacts__label-email">E-mail:<span class="contacts__label-asterisk">*</span></label>
-              <input class="contacts__input contacts__input-email" type="text" name="client-name" placeholder="KUKLACHEV@GMAIL.COM">
+              <label class="program-form__label contacts__label contacts__label-email">E-mail:*</label>
+              <input class="program-form__input contacts__input contacts__input-email" type="text" name="client-name" placeholder="KUKLACHEV@GMAIL.COM">
             </div>
 
             <div class="contacts__wrapper">
-              <label class="program-form__label contacts__label contacts__label-phone ">Телефон:<span class="contacts__label-asterisk">*</span></label>
-              <input class="contacts__input contacts__input-phone" type="text" name="phone" placeholder="8 (960) 900-60-90">
+              <label class="program-form__label contacts__label contacts__label-phone ">Телефон:*</label>
+              <input class="program-form__input contacts__input contacts__input-phone" type="text" name="phone" placeholder="8 (960) 900-60-90">
             </div>
           </fieldset>
 
           <!-- Users comments -->
-          <fieldset class="program-form__item program-form__comment comment">
+          <fieldset class="program-form__item comment">
             <legend class="comment__title program-form__item-title" for="user-comment">Комментарий</legend>
             <div class="comment__wrapper">
               <textarea class="comment__textarea" name="user-comment" id="user-comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -94,7 +94,7 @@
           </fieldset>
 
           <!-- Additional info -->
-          <fieldset class="program-form__item program-form__additional-info additional-info">
+          <fieldset class="program-form__item additional-info">
             <legend class="additional-info__title program-form__item-title">Дополнительно</legend>
             <ul class="additional-info__list">
                 <!-- Sweetener -->
@@ -123,8 +123,8 @@
         </form>
         <!-- Send a request button -->
         <div class="program-form__button-wrapper">
-            <button class="program-form__button-submit button" type="submit">Отправить заявку</button>
-            <p class="program-form__text"><span class="program-form__text-asterisk">*</span> — Обязательные поля</p>
+            <button class="program-form__button-submit button">Отправить заявку</button>
+            <p class="program-form__text-required">* — Обязательные поля</p>
         </div>
 
         <!-- Address -->
