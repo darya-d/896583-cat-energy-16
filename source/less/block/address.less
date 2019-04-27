@@ -13,6 +13,20 @@
   color: #111111;
 }
 
+@media (min-width: @width-tablet) {
+  .address__slogan {
+    font-size: 20px;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .address__slogan {
+    font-size: 20.25px;
+    line-height: 1em;
+  }
+}
+
 .address__text {
   font-weight: 400;
   font-size: 14px;
@@ -20,4 +34,37 @@
   line-height: 1.43em;
 
   color: #444444;
+}
+
+@media (min-width: @width-tablet) {
+  .address__text {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .address__text {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+}
+
+.address__map {
+  width: 320px;
+  height: 416px;
+}
+
+@media (min-width: @width-tablet) {
+  .address__map {
+    width: 767px;
+    height: 400px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .address__map {
+    width: 1440px;
+    height: 400px;
+  }
 }

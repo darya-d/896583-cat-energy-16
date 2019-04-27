@@ -3,17 +3,42 @@
   font-size: 24px;
   line-height: 1em;
   text-transform: uppercase;
-
   color: #111111;
 }
 
+@media (min-width: @width-tablet) {
+  .results__numbers {
+    font-size: 30px;
+    line-height: 1.23em;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .results__numbers {
+    font-size: 30px;
+    line-height: 1.23em;
+  }
+}
+
 .results__text {
+  font-family: @font-arial;
   font-weight: 400;
   font-size: 12px;
-  font-family: @font-arial;
   line-height: 1em;
   text-transform: none;
-
-
   color: #111111;
+}
+
+@media (min-width: @width-tablet) {
+  .results__text {
+    font-size: 14px;
+    line-height: 1em;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .results__text {
+    font-size: 14px;
+    line-height: 1em;
+  }
 }
