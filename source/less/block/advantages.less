@@ -1,8 +1,3 @@
-.advantages {
-  width: 320px;
-  margin: 0 auto;
-}
-
 .advantages__title {
   font-weight: 400;
   font-size: 36px;
@@ -11,11 +6,29 @@
   color: #111111;
 }
 
+@media (min-width: @width-tablet) {
+  .advantages__title {
+    font-size: 60px;
+    line-height: 1em;
+  }
+}
+
 .advantages__text {
+  font-family: @font-arial;
   font-weight: 400;
   font-size: 14px;
-  font-family: @font-arial;
   line-height: 1.29em;
 
   color: #444444;
+}
+
+@media (min-width: @width-tablet) {
+  .advantages__text {
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+}
+
+.advantages__list {
+  .reset-list();
 }

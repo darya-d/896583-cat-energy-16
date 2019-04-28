@@ -1,10 +1,6 @@
 .promo {
   display: block;
-  width: 320px;
-  margin: 0 auto;
-  background-image: url("../../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-color: #68b738;
+  background: url("../../img/index-background-mobile@1x.jpg") no-repeat 50% 0%;
 }
 
 .promo__title {
@@ -15,13 +11,6 @@
 }
 
 @media (min-width: @width-tablet) {
-  .promo__title {
-    font-size: 60px;
-    color: #111111;
-  }
-}
-
-@media (min-width: @width-desktop) {
   .promo__title {
     font-size: 60px;
     color: #111111;
@@ -44,37 +33,21 @@
   }
 }
 
-@media (min-width: @width-desktop) {
-  .promo__text {
-    font-size: 20px;
-    color: #111111;
-  }
-}
-
 .promo__button-find {
-  width: 280px;
-  height: 40px;
+  display: inline-block;
+  min-width: 280px;
+  min-height: 40px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.29em;
-
   color: #ffffff;
   background-color: #68b738;
 }
 
 @media (min-width: @width-tablet) {
   .promo__button-find {
-    width: 245px;
-    height: 52px;
-    font-size: 20px;
-    line-height: 1em;
-  }
-}
-
-@media (min-width: @width-desktop) {
-  .promo__button-find {
-    width: 245px;
-    height: 52px;
+    min-width: 245px;
+    min-height: 52px;
     font-size: 20px;
     line-height: 1em;
   }
