@@ -1,6 +1,17 @@
-.program-form {
-  width: 320px;
-  margin: 0 auto;
+.program-form__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+@media (min-width: @width-tablet) {
+  .program-form__text {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .program-form__item {
@@ -10,55 +21,69 @@
 .program-form__item-title {
   font-weight: 400;
   font-size: 24px;
-  line-height: 1em;
+  line-height: 24px;
   text-transform: none;
 
   color: #111111;
 }
 
-.program-form__text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.29em;
-  text-transform: uppercase;
-
-  color: #111111;
+@media (min-width: @width-tablet) {
+  .program-form__item-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .program-form__text-required {
   font-weight: 400;
-  font-size: 14px;
   font-family: @font-arial;
-  line-height: 1.14em;
+  font-size: 14px;
+  line-height: 16px;
   text-transform: none;
 
   color: #444444;
 }
 
-.program-form__label {
+@media (min-width: @width-tablet) {
+  .program-form__text-required {
+    font-size: 16px;
+  }
+}
+
+.program-form__label,
+.program-form__input {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.13em;
+  line-height: 18px;
   text-transform: uppercase;
 
   color: #222222;
 }
 
 .program-form__input {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.13em;
-  text-transform: uppercase;
-
   color: #444444;
+}
+
+@media (min-width: @width-tablet) {
+  .program-form__label,
+  .program-form__input {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .program-form__button-submit {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.25em;
+  line-height: 20px;
   text-transform: uppercase;
 
   color: #ffffff;
   background-color: #68b738;
+}
+
+@media (min-width: @width-tablet) {
+  .program-form__button-submit {
+    font-size: 20px;
+  }
 }

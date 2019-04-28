@@ -1,9 +1,16 @@
 .extra-products__title {
   font-weight: 400;
   font-size: 24px;
-  line-height: 1em;
+  line-height: 24px;
 
   color: #111111;
+}
+
+@media (min-width: @width-tablet) {
+  .extra-products__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .extra-products__list {
@@ -13,8 +20,15 @@
 .extra-products__text {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1em;
+  line-height: 16px;
   text-transform: uppercase;
 
   color: #222222;
+}
+
+@media (min-width: @width-tablet) {
+  .extra-products__text {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

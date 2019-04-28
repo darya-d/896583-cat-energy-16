@@ -1,9 +1,16 @@
 .table-properties__property,
 .table-properties__value {
   font-weight: 400;
-  font-size: 12px;
   font-family: @font-arial;
-  line-height: 1.33em;
+  font-size: 12px;
+  line-height: 16px;
 
   color: #444444;
+}
+
+@media (min-width: @width-tablet) {
+  .table-properties__property,
+  .table-properties__value {
+    font-size: 16px;
+  }
 }

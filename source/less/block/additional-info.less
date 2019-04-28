@@ -1,8 +1,19 @@
+.additional-info__list {
+  .reset-list();
+}
+
 .additional-info__checkbox-label {
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.13em;
+  line-height: 18px;
   text-transform: uppercase;
 
   color: #222222;
+}
+
+@media (min-width: @width-tablet) {
+  .additional-info__checkbox-label {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
