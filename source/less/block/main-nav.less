@@ -1,13 +1,35 @@
 .main-nav {
-  background-color: #ffffff;
-}
-
-@media (min-width: @width-desktop) {
-  .main-nav {
-    background-color: transparent;
-  }
+  width: 320px;
+  margin: 0 auto;
 }
 
 .main-nav__list {
   .reset-list();
+}
+
+@media (min-width: @width-tablet) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  .site-list {
+    width: 570px;
+
+    /* Временно для сетки */
+    min-height: 35px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .main-nav__wrapper {
+    width: 485px;
+  }
 }
