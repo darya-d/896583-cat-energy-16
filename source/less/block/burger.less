@@ -1,3 +1,19 @@
 .burger {
-  background-color: #000000;
+  position: absolute;
+  top: -50px;
+  right: 55px;
+  z-index: 2;
+
+  display: block;
+  width: 25px;
+  height: 20px;
+
+  cursor: pointer;
+  border: none;
+}
+
+@media (min-width: @width-tablet) {
+  .burger {
+    display: none;
+  }
 }

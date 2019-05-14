@@ -1,30 +1,129 @@
 .main-nav {
-  width: 320px;
-  margin: 0 auto;
+  position: relative;
 
-  display: none;
+  width: 320px;
+  min-height: 51px;
+  margin: 0 auto;
 }
 
 .main-nav__list {
   .reset-list();
 }
 
-@media (min-width: @width-tablet) {
-  .main-nav {
-    display: flex;
-    justify-content: space-between;
-    width: 450px;
-    margin: 0 auto;
+.main-nav--closed .burger::before {
+  content: "";
+
+  position: absolute;
+  top: 15px;
+  left: 17px;
+
+  width: 36px;
+  height: 2px;
+
+  background-color: #222222;
+  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+}
+
+.main-nav--closed .burger:active::before {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 0 0 rgba(255, 255, 255, 0.3), 0 16px 0 0 rgba(255, 255, 255, 0.3);
+}
+
+.main-nav--opened .burger {
+  top: -50px;
+  right: 55px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 24px;
+    left: 18px;
+
+    width: 36px;
+    height: 2px;
+
+    background-color: #222222;
   }
 
-  .site-list {
-    /* Временно для сетки */
-    min-height: 35px;
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
   }
 }
 
-@media (min-width: @width-desktop) {
+@media (max-width: @width-mobile-only) {
+  .main-nav--closed .site-list__item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .main-nav--closed .site-list__item--active .site-list__item-link {
+    padding-right: 70px;
+    padding-left: 70px;
+
+    text-align: center;
+  }
+
+  .main-nav--opened .main-nav__list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 70px;
+    z-index: 10;
+
+    min-height: 80vh;
+  }
+
+  .main-nav--opened .main-nav__list::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    width: 7px;
+    height: 100%;
+  }
+
+  .main-nav--nojs .burger {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+  }
+
+  .main-nav--nojs .site-list__item {
+    display: block;
+  }
+
+  .main-nav--nojs .site-list__item--active .site-list__item-link {
+    padding-right: 21px;
+    padding-left: 21px;
+
+    text-align: center;
+  }
+}
+
+@media (min-width: @width-tablet) {
   .main-nav {
-    width: 485px;
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .main-nav__list {
+    display: flex;
+    width: 640px;
+    margin: 0 auto;
   }
 }
