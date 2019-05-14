@@ -12,6 +12,7 @@
   font-family: @font-arial;
   font-size: 14px;
   line-height: 20px;
+  // margin-bottom: 20px;
 
   color: #444444;
 }
@@ -19,9 +20,17 @@
 .address__map {
   min-width: 100%;
   height: 362px;
+
+  overflow: hidden;
+  background: url("../img/map-pin.png") no-repeat 50% 50%, url("../img/bg-map-mobile@1x.png") no-repeat 50% 50%;
 }
 
 @media (min-width: @width-tablet) {
+  .address__map {
+    height: 396px;
+    background: url("../img/map-pin.png") no-repeat 50% 50%, url("../img/bg-map-tablet@1x.png") no-repeat 50% 50%;
+  }
+
   .address__text {
     font-size: 16px;
   }
@@ -30,16 +39,24 @@
     font-size: 20px;
     line-height: 25px;
   }
-
-  .address__map {
-    width: 100%;
-    height: 396px;
-  }
 }
 
 @media (min-width: @width-desktop) {
   .address__map {
-    width: 100%;
     height: 400px;
+    background: url("../img/map-pin.png") no-repeat 50% 50%, url("../img/bg-map-desktop@1x.png") no-repeat 50% 50%;
+  }
+
+  .address__wrapper {
+    display: block;
+    position: relative;
+  }
+
+  .address__wrapper-position {
+    position: absolute;
+    background-color: #ffffff;
+    left: 0;
+    top: 100px;
+    padding: 50px;
   }
 }
