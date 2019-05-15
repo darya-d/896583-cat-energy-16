@@ -1,3 +1,18 @@
+.copyright {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 16px;
+  padding-top: 12px;
+  padding-bottom: 21px;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .copyright__company-name {
   font-weight: 400;
   font-family: @font-arial;
@@ -5,4 +20,28 @@
   line-height: 16px;
 
   color: #444444;
+}
+
+@media (min-width: @width-tablet) {
+  .copyright {
+    width: auto;
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  .copyright__company-name {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .copyright {
+    margin-right: 0;
+  }
+
+  .copyright__logo svg {
+    &:hover {
+      fill: #68b738;
+    }
+  }
 }
