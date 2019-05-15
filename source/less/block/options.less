@@ -1,11 +1,15 @@
-.options__item {
-  max-width: 320px;
-  min-height: 266px;
-  background-color: #f2f2f2;
+.options {
+  margin-bottom: 10px;
 }
 
-.options-item {
+.options__item {
+  width: 280px;
+  display: block;
+  margin: auto;
   margin-bottom: 20px;
+  padding: 22px 20px 22px 20px;
+
+  background-color: #f2f2f2;
 }
 
 .options-item__title {
@@ -13,41 +17,39 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+  text-align: left;
+
+  margin: 0 0 30px 72px;
 
   position: relative;
-  margin: 0;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 70px;
 
   color: #111111;
-}
 
-.options-item__title--slim {
   &::before {
+    content: "";
+
     position: absolute;
-    top: 5px;
-    left: 2px;
+    left: -70px;
+    bottom: -12px;
 
     width: 50px;
     height: 50px;
 
-    content: "";
-
     border-radius: 50%;
     background-color: #68b738;
   }
+}
 
+.options-item__title--slim {
   &::after {
+    content: "";
+
     position: absolute;
-    top: 3px;
-    left: 10px;
+    left: -62px;
+    bottom: -10px;
 
     width: 35px;
     height: 49px;
-
-    content: "";
 
     background-image: url("../img/icon-cat-slim.svg");
     background-repeat: no-repeat;
@@ -55,29 +57,15 @@
 }
 
 .options-item__title--pro {
-  &::before {
-    position: absolute;
-    top: 5px;
-    left: 2px;
-
-    width: 50px;
-    height: 50px;
-
+  &::after {
     content: "";
 
-    border-radius: 50%;
-    background-color: #68b738;
-  }
-
-  &::after {
     position: absolute;
-    top: 16px;
-    left: -7px;
+    left: -75px;
+    bottom: -5px;
 
     width: 67px;
     height: 28px;
-
-    content: "";
 
     background-image: url("../img/icon-cat-pro.svg");
     background-repeat: no-repeat;
@@ -89,8 +77,13 @@
   font-family: @font-arial;
   font-size: 14px;
   line-height: 18px;
+  text-align: left;
+
+  width: 240px;
+  padding-bottom: 22px;
 
   color: #444444;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .options-item__link {
@@ -99,38 +92,56 @@
   line-height: 16px;
   text-transform: uppercase;
 
+  display: inline-block;
+  position: relative;
+
+  text-decoration: none;
   color: #111111;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    width: 25px;
+    height: 12px;
+    bottom: 1px;
+    margin-left: 10px;
+
+    background: url("../img/icon-right-arrow-long.svg") no-repeat;
+ }
 }
 
 @media (min-width: @width-tablet) {
   .options__item {
-    max-width: 708px;
-    min-height: 372px;
+    width: 708px;
+    padding: 62px 0 62px 52px;
+    margin-bottom: 30px;
   }
 
   .options-item__title {
     font-size: 36px;
     line-height: 37px;
-  }
+    margin-left: 0;
+    margin-bottom: 26px;
 
-  .options-item__title--slim {
     &::before {
-      top: 52px;
-      left: 396px;
-
+      left: 393px;
+      bottom: -180px;
       width: 200px;
       height: 200px;
     }
+  }
 
+  .options-item__title--slim {
     &::after {
+      content: "";
+
       position: absolute;
-      top: 40px;
-      left: 426px;
+      left: 430px;
+      bottom: -170px;
 
       width: 140px;
       height: 194px;
-
-      content: "";
 
       background-image: url("../img/icon-cat-slim.svg");
       background-repeat: no-repeat;
@@ -140,6 +151,11 @@
   .options-item__text {
     font-size: 16px;
     line-height: 24px;
+
+    width: 372px;
+    margin-bottom: 36px;
+
+    border: 0;
   }
 
   .options-item__link {
@@ -148,23 +164,15 @@
   }
 
   .options-item__title--pro {
-    &::before {
-      top: 51px;
-      left: 398px;
-
-      width: 200px;
-      height: 200px;
-    }
-
     &::after {
+      content: "";
+
       position: absolute;
-      top: 95px;
-      left: 362px;
+      left: 365px;
+      bottom: -140px;
 
       width: 268px;
       height: 112px;
-
-      content: "";
 
       background-image: url("../img/icon-cat-pro.svg");
       background-repeat: no-repeat;
@@ -173,34 +181,49 @@
 }
 
 @media (min-width: @width-desktop) {
+  .options {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .options-item {
+    width: 570px;
+    padding: 41px 50px 56px 52px;
+    margin: 0;
+  }
+
   .options__item:not(:last-child) {
-    max-width: 570px;
-    min-height: 372px;
-    margin-right: 10px;
+    margin-right: 80px;
   }
 
   .options__wrapper {
     display: flex;
   }
 
-  .options-item__title--slim {
+  .options-item__title {
+    margin-left: 162px;
+    margin-bottom: 75px;
+
     &::before {
-      top: 7px;
-      left: 0;
+      left: -164px;
+      bottom: -35px;
 
       width: 100px;
       height: 100px;
     }
+  }
 
+  .options-item__title--slim {
     &::after {
+      content: "";
+
       position: absolute;
-      top: 1px;
-      left: 15px;
+      left: -150px;
+      bottom: -25px;
 
       width: 71px;
       height: 97px;
-
-      content: "";
 
       background-image: url("../img/icon-cat-slim.svg");
       background-repeat: no-repeat;
@@ -208,26 +231,23 @@
   }
 
   .options-item__title--pro {
-    &::before {
-      top: 7px;
-      left: 0;
-
-      width: 100px;
-      height: 100px;
-    }
-
     &::after {
+      content: "";
+
       position: absolute;
-      top: 29px;
-      left: -17px;
+      left: -180px;
+      bottom: -15px;
 
       width: 134px;
       height: 57px;
 
-      content: "";
-
       background-image: url("../img/icon-cat-pro.svg");
       background-repeat: no-repeat;
     }
+  }
+
+  .options-item__text {
+    width: 480px;
+    margin-bottom: 10px;
   }
 }
