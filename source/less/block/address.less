@@ -1,20 +1,44 @@
-.address__slogan {
+.address--cat {
+  background-color: #f2f2f2;
+}
+
+.address__wrapper-position {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.address__invitation {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
 
+  width: 123px;
+  margin-top: 31px;
+  margin-bottom: 26px;
+
   color: #111111;
 }
 
-.address__text {
+.address__wrapper-location {
+  width: 135px;
+}
+
+.address__location {
   font-weight: 400;
   font-family: @font-arial;
   font-size: 14px;
   line-height: 20px;
-  // margin-bottom: 20px;
+
+  margin: 0;
 
   color: #444444;
+}
+
+.address__location:first-child {
+  margin-bottom: -5px;
 }
 
 .address__map {
@@ -26,18 +50,41 @@
 }
 
 @media (min-width: @width-tablet) {
+  .address__wrapper-position {
+    justify-content: space-between;
+
+    width: 628px;
+    padding: 63px 70px 58px;
+    margin: auto;
+  }
+
   .address__map {
     height: 396px;
     background: url("../img/map-pin.png") no-repeat 50% 50%, url("../img/bg-map-tablet@1x.png") no-repeat 50% 50%;
   }
 
-  .address__text {
+  .address__invitation {
+    font-size: 20px;
+    line-height: 25px;
+
+    width: 155px;
+    margin-left: -105px;
+    margin-top: 69px;
+    margin-right: 280px;
+    margin-bottom: 62px;
+  }
+
+  .address__wrapper-location {
+    width: 155px;
+    text-align: right;
+  }
+
+  .address__location {
     font-size: 16px;
   }
 
-  .address__slogan {
-    font-size: 20px;
-    line-height: 25px;
+  .address__location:first-child {
+    margin-bottom: 10px;
   }
 }
 
@@ -48,15 +95,29 @@
   }
 
   .address__wrapper {
-    display: block;
     position: relative;
   }
 
   .address__wrapper-position {
     position: absolute;
-    background-color: #ffffff;
     left: 0;
     top: 100px;
-    padding: 50px;
+
+    width: 570px;
+    padding-left: 75px;
+    padding-right: 85px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    background-color: #ffffff;
+  }
+
+  .address__invitation {
+    margin-left: 0px;
+    margin-right: 95px;
+  }
+
+  .address__wrapper-location {
+    text-align: left;
   }
 }
