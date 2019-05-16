@@ -18,10 +18,11 @@
   line-height: 24px;
   text-transform: none;
 
-  display: inline-block;
+  display: inline;
   position: relative;
-  width: auto;
   z-index: 1;
+
+  padding-right: 20px;
 
   color: #111111;
   background-color: #ffffff;
@@ -35,21 +36,6 @@
   position: absolute;
   top: 50%;
   z-index: -1;
-  margin: 0 20px;
-
-  background-color: #68b738;
-}
-
-.program-form__item-title::before {
-  content: "";
-
-  height: 2px;
-  width: 100vw;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  z-index: -1;
-  margin: 0 20px;
 
   background-color: #68b738;
 }
@@ -97,6 +83,21 @@
   .program-form__item-title {
     font-size: 36px;
     line-height: 36px;
+
+    padding: 0 20px;
+  }
+
+  .program-form__item-title::before {
+    content: "";
+
+    height: 2px;
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: -1;
+
+    background-color: #68b738;
   }
 
   .program-form__text-required {
