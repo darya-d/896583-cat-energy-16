@@ -10,21 +10,23 @@
 
     <header class="page-header">
       <div class="container">
-        <div class="page-header__wrapper">
-          <a class="page-header__logo-link" href="index.html">
-            <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип магазина Cat energy">
-          </a>
-          <nav class="main-nav main-nav--closed main-nav--nojs">
-            <button class="burger" type="button" aria-label="Открыть главное меню"></button>
-            <ul class="main-nav__list site-list">
-              <li class="site-list__item">
-                <a class="site-list__item-link" href="index.html">Главная</a>
+        <div class="page-header__wrapper-big">
+          <div class="page-header__wrapper">
+            <a class="page-header__logo-link" href="#">
+              <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип магазина Cat energy">
+            </a>
+            <button class="burger burger--opened" type="button" aria-label="Открыть главное меню"></button>
+          </div>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__item-link" href="index.html">Главная</a>
               </li>
-              <li class="site-list__item">
-                <a class="site-list__item-link" href="catalog.html">Каталог продукции</a>
+              <li class="main-nav__item">
+                <a class="main-nav__item-link" href="catalog.html">Каталог продукции</a>
               </li>
-              <li class="site-list__item site-list__item--active">
-                <a class="site-list__item-link" href="#">Подбор программы</a>
+              <li class="main-nav__item main-nav__item--active">
+                <a class="main-nav__item-link" href="#">Подбор программы</a>
               </li>
             </ul>
           </nav>
@@ -184,20 +186,18 @@
       </div>
     </footer>
     <script>
-        var navMain = document.querySelector('.main-nav');
-        var navBurger = document.querySelector('.burger');
+      var nav = document.querySelector(".main-nav");
+      var burger = document.querySelector(".burger");
 
-        navMain.classList.remove('main-nav--nojs');
+      document.addEventListener("DOMContentLoaded", function(event) {
+        nav.classList.remove("main-nav--show");
+        burger.classList.add("burger--opened");
+      });
 
-        navBurger.addEventListener('click', function() {
-          if (navMain.classList.contains('main-nav--closed')) {
-            navMain.classList.remove('main-nav--closed');
-            navMain.classList.add('main-nav--opened');
-          } else {
-            navMain.classList.add('main-nav--closed');
-            navMain.classList.remove('main-nav--opened');
-          }
-        });
+      burger.addEventListener("click", function(event) {
+        nav.classList.toggle("main-nav--show");
+        burger.classList.toggle("burger--opened");
+      });
     </script>
   </body>
 </html>

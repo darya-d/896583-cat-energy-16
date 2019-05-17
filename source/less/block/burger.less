@@ -1,15 +1,19 @@
 .burger {
-  position: absolute;
-  top: -50px;
-  right: 55px;
-  z-index: 2;
-
-  display: block;
-  width: 25px;
-  height: 20px;
-
-  cursor: pointer;
+  width: 19px;
+  height: 19px;
+  margin-left: 60px;
+  outline: none;
   border: none;
+  cursor: pointer;
+
+  background: url("../img/icon-close.svg") no-repeat;
+}
+
+.burger--opened {
+  width: 25px;
+  height: 19px;
+
+  background: url("../img/icon-mobile-menu.svg") no-repeat;
 }
 
 @media (min-width: @width-tablet) {
