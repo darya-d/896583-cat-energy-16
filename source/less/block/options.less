@@ -108,7 +108,7 @@
     margin-left: 10px;
 
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
- }
+  }
 }
 
 @media (min-width: @width-tablet) {
@@ -181,12 +181,6 @@
 }
 
 @media (min-width: @width-desktop) {
-  .options {
-    width: 1220px;
-    display: flex;
-    justify-content: space-between;
-  }
-
   .options-item {
     width: 570px;
     padding: 41px 50px 56px 52px;
@@ -199,6 +193,7 @@
 
   .options__wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .options-item__title {
