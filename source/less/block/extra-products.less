@@ -1,32 +1,179 @@
+.extra-products {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+
 .extra-products__title {
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  // margin-top: 27px;
+  // margin-bottom: 32px;
+
+  position: relative;
+  // display: inline-block;
+
+  width: 230px;
 
   color: #111111;
+  background-color: #ffffff;
+}
+
+.extra-products__title::after {
+  content: "";
+
+  height: 2px;
+  width: 100vw;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+
+  background-color: #68b738;
 }
 
 .extra-products__list {
   .reset-list();
 }
 
-.extra-products__text {
+.extra-products__item {
+  padding: 12px 0 17px;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.extra-products__item:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.extra-products__item-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  margin-bottom: 11px;
+}
+
+.extra-products__name {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
 
+  margin-bottom: 6px;
+
   color: #222222;
 }
 
 @media (min-width: @width-tablet) {
+  .extra-products__wrapper {
+    margin-top: 45px;
+  }
+
+  .extra-products__list {
+    margin-top: 45px;
+  }
+
   .extra-products__title {
     font-size: 36px;
     line-height: 36px;
+
+    width: 370px;
+    // padding-left: 37px;
+    // padding-right: 0;
+
+    &::before {
+      content: "";
+
+      height: 2px;
+      width: 100vw;
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+      z-index: -1;
+
+      background-color: #68b738;
+    }
   }
 
-  .extra-products__text {
+  .extra-products__item {
+    width: 708px;
+    margin: auto;
+    margin-bottom: -1px;
+    padding: 18px 0 25px;
+
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .extra-products__item-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 633px;
+    margin-bottom: 20px;
+  }
+
+  .extra-products__name {
     font-size: 20px;
     line-height: 20px;
+    text-align: left;
+
+    display: block;
+  }
+
+  .extra-products__button-order {
+    width: 633px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .extra-products {
+    padding-bottom: 86px;
+  }
+
+  .extra-products__title {
+    margin-top: 12px;
+  }
+
+  .extra-products__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 45px;
+  }
+
+  .extra-products__list {
+    margin-top: 0;
+  }
+
+  .extra-products__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 895px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    margin-left: 0;
+
+    border-left: none;
+    border-right: none;
+  }
+
+  .extra-products__item-wrapper {
+    margin: 0;
+    margin-right: 13px;
+  }
+
+  .extra-products__name {
+    margin: 0;
+    margin-right: 42px;
+  }
+
+  .extra-products__button-order {
+    width: 245px;
   }
 }

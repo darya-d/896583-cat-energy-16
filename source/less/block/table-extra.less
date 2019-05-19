@@ -1,0 +1,63 @@
+.table-extra {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-extra__property,
+.table-extra__value {
+  font-weight: 400;
+  font-family: @font-arial;
+  font-size: 14px;
+  line-height: 14px;
+
+  word-wrap: break-word;
+  border-spacing: 0 2px;
+
+  color: #444444;
+}
+
+.table-extra__value {
+  text-align: right;
+}
+
+@media (min-width: @width-tablet) {
+  .table-extra {
+    width: 353px;
+  }
+
+  .table-extra tr {
+    height: 31px;
+  }
+
+  .table-extra__property,
+  .table-extra__value {
+    font-size: 16px;
+    line-height: 16px;
+
+    border: none;
+  }
+
+  .table-extra__property {
+    text-align: right;
+  }
+
+  .table-extra__value {
+    width: 92px;
+  }
+}
+
+@media (min-width: @width-desktop) {
+  .table-extra {
+    width: 311px;
+    padding-top: 5px;
+  }
+
+  .table-extra__property,
+  .table-extra__value {
+    text-align: left;
+  }
+
+  .table-extra__value {
+    width: 65px;
+  }
+}
