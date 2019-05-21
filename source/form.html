@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-
     <header class="page-header">
       <div class="container container--full">
         <div class="page-header__wrapper-big">
           <div class="page-header__wrapper">
             <a class="page-header__logo-link" href="#">
-              <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип магазина Cat energy">
+            <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип магазина Cat energy">
             </a>
             <button class="burger burger--opened" type="button" aria-label="Открыть главное меню"></button>
           </div>
@@ -33,103 +32,99 @@
         </div>
       </div>
     </header>
-
     <main class="page-main">
       <div class="container">
-        <h1 class="page-main__title">Подбор программы</h1>
-        <h2 class="visually-hidden">Анкета для вашего кота</h2>
+        <h1 class="page-main__title page-main__title--form">Подбор программы</h1>
       </div>
-      <form class="program-form" action="#" method="post">
+      <!-- Форма -->
+      <section class="program-form">
         <div class="container">
-          <p class="program-form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-          <!-- Profile of the cat -->
-          <fieldset class="program-form__item about-cat">
-            <h3 class="visually-hidden">Данные о вашем коте</h3>
-            <div class="about-cat__wrapper">
-              <label class="program-form__label about-cat__label about-cat__label-name" for="name">Имя:*</label>
-              <input class="program-form__input about-cat__input about-cat__input-name" type="text" id="name" name="name" placeholder="Барсик">
+          <h2 class="visually-hidden">Форма для подбора питания вашему коту</h2>
+          <form class="program-form__form" action="#" method="post">
+            <div class="program-form__wrapper-info">
+              <!-- Profile of the cat -->
+              <fieldset class="program-form__field program-form__field--about-cat" title="Анкета кота">
+                <h3 class="visually-hidden">Анкета кота</h3>
+                <legend class="program-form__field-legend">Заполните анкету и мы подберем программу питания для вашего кота</legend>
+                <label class="program-form__field-label" for="name">Имя:<sup>*</sup>
+                  <input class="program-form__field-input" type="text" id="name" name="name" placeholder="Барсик">
+                </label>
+                <label class="program-form__field-label" for="weight">Вес (кг):<sup>*</sup>
+                  <input class="program-form__field-input" type="text" id="weight" name="weight" placeholder="7">
+                </label>
+                <label class="program-form__field-label" for="age">Возраст (лет):
+                  <input class="program-form__field-input" type="text" id="age" name="age" placeholder="7">
+                </label>
+              </fieldset>
+              <!-- Purpose of the program -->
+              <fieldset class="program-form__field program-form__field--purpose" title="Цель программы">
+                <label class="program-form__field-label">
+                  <input class="program-form__field-radio visually-hidden" type="radio" name="radio" checked="">
+                  <span class="program-form__field-option">Похудение</span>
+                </label>
+                <label class="program-form__field-label">
+                  <input class="program-form__field-radio visually-hidden" type="radio" name="radio">
+                  <span class="program-form__field-option">Набор массы</span>
+                </label>
+                <label class="program-form__field-label">
+                  <input class="program-form__field-radio visually-hidden" type="radio" name="radio">
+                  <span class="program-form__field-option">Не знаю (Нужен ваш совет)</span>
+                </label>
+              </fieldset>
             </div>
-            <div class="about-cat__wrapper">
-              <label class="program-form__label about-cat__label about-cat__label-weight" for="weight">Вес (кг):*</label>
-              <input class="program-form__input about-cat__input about-cat__input-weight" type="text" id="weight" name="weight" placeholder="7">
+            <!-- Users contacts -->
+            <div class="program-form__wrapper-field">
+              <fieldset class="program-form__field program-form__field--contacts">
+                <h3 class="program-form__field-title">Контактные данные (владельца кота)</h3>
+                <div class="program-form__wrapper-contacts">
+                  <label class="program-form__field-label program-form__field-label--mail">E-mail:<sup>*</sup>
+                    <input class="program-form__field-input" type="email" name="textfield" value="kuklachev@gmail.com" placeholder="E-mail" required="">
+                  </label>
+                  <label class="program-form__field-label program-form__field-label--phone">Телефон:<sup>*</sup>
+                    <input class="program-form__field-input" type="tel" name="textfield" value="8 (960) 900-60-90" placeholder="Телефон" required="">
+                  </label>
+                </div>
+              </fieldset>
             </div>
-            <div class="about-cat__wrapper">
-              <label class="program-form__label about-cat__label about-cat__label-age" for="age">Возраст (лет):</label>
-              <input class="program-form__input about-cat__input about-cat__input-age" type="text" id="age" name="age" placeholder="7">
+            <!-- Users comments -->
+            <div class="program-form__wrapper-field">
+              <fieldset class="program-form__field program-form__field--comment">
+                <h3 class="program-form__field-title">Комментарий</h3>
+                <textarea class="program-form__field-textarea" name="user-comment" rows="7" cols="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+              </fieldset>
             </div>
-          </fieldset>
-          <!-- Purpose of the program -->
-          <fieldset class="program-form__item purpose">
-            <legend class="visually-hidden">Цель</legend>
-            <ul class="purpose__list">
-              <li class="purpose__item">
-                <input class="purpose__item-slim purpose__radio visually-hidden" type="radio" name="slim" id="slim" value="slim" checked>
-                <label class="purpose__radio-label" for="slim" checked>Похудение</label>
-              </li>
-              <li class="purpose__item">
-                <input class="purpose__item-weight purpose__radio visually-hidden" type="radio" name="weight" id="weight" value="weight">
-                <label class="purpose__radio-label" for="weight">Набор массы</label>
-              </li>
-              <li class="purpose__item">
-                <input class="purpose__item-advice purpose__radio visually-hidden" type="radio" name="advice" id="advice" value="advice">
-                <label class="purpose__radio-label" for="advice">Не знаю (нужен ваш совет)</label>
-              </li>
-            </ul>
-          </fieldset>
-          <!-- Users contacts -->
-          <fieldset class="program-form__item contacts">
-            <h3 class="contacts__title program-form__item-title">Контактные данные (владельца кота)</h3>
-            <div class="contacts__wrapper">
-              <label class="program-form__label contacts__label contacts__label-email">E-mail:*</label>
-              <input class="program-form__input contacts__input contacts__input-email" type="text" name="client-name" placeholder="KUKLACHEV@GMAIL.COM">
+            <!-- Additional info -->
+            <div class="program-form__wrapper-field">
+              <fieldset class="program-form__field program-form__field--extra">
+                <h3 class="program-form__field-title">Дополнительно</h3>
+                <div class="program-form__wrapper-extra">
+                  <label class="program-form__field-label program-form__field-label--extra">
+                    <input class="program-form__field-checkbox visually-hidden" type="checkbox" checked="">
+                    <span class="program-form__field-option">Сахарозаменитель</span>
+                  </label>
+                  <label class="program-form__field-label program-form__field-label--extra">
+                    <input class="program-form__field-checkbox visually-hidden" type="checkbox">
+                    <span class="program-form__field-option">Питьевая вода</span>
+                  </label>
+                  <label class="program-form__field-label program-form__field-label--extra">
+                    <input class="program-form__field-checkbox visually-hidden" type="checkbox">
+                    <span class="program-form__field-option">Молоко</span>
+                  </label>
+                  <label class="program-form__field-label program-form__field-label--extra">
+                    <input class="program-form__field-checkbox visually-hidden" type="checkbox">
+                    <span class="program-form__field-option">Витамины</span>
+                  </label>
+                </div>
+              </fieldset>
             </div>
-            <div class="contacts__wrapper">
-              <label class="program-form__label contacts__label contacts__label-phone ">Телефон:*</label>
-              <input class="program-form__input contacts__input contacts__input-phone" type="text" name="phone" placeholder="8 (960) 900-60-90">
+            <!-- Send a request button -->
+            <div class="program-form__wrapper-request">
+              <button class="program-form__button-submit button">Отправить заявку</button>
+              <span class="program-form__request"><sup>*</sup> — Обязательные поля</span>
             </div>
-          </fieldset>
-          <!-- Users comments -->
-          <fieldset class="program-form__item comment">
-            <h3 class="comment__title program-form__item-title" for="user-comment">Комментарий</h3>
-            <div class="comment__wrapper">
-              <textarea class="comment__textarea" name="user-comment" id="user-comment" cols="30" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-          </fieldset>
-          <!-- Additional info -->
-          <fieldset class="program-form__item additional-info">
-            <h3 class="additional-info__title program-form__item-title">Дополнительно</h3>
-            <ul class="additional-info__list">
-              <!-- Sweetener -->
-              <li class="additional-info__item">
-                <input class="additional-info__item-sweetener additional-info__checkbox visually-hidden" type="checkbox" name="sweetener" id="sweetener" value="sweetener" checked>
-                <label class="additional-info__checkbox-label" for="sweetener" checked>Сахарозаменитель</label>
-              </li>
-              <!-- Water -->
-              <li class="additional-info__item">
-                <input class="additional-info__item-water  additional-info__checkbox visually-hidden" type="checkbox" name="water" id="water" value="water">
-                <label class="additional-info__checkbox-label" for="water">Питьевая вода</label>
-              </li>
-              <!-- Milk -->
-              <li class="additional-info__item">
-                <input class="additional-info__item-milk  additional-info__checkbox visually-hidden" type="checkbox" name="milk" id="milk" value="milk">
-                <label class="additional-info__checkbox-label" for="milk">Молоко</label>
-              </li>
-              <!-- Vitamins -->
-              <li class="additional-info__item">
-                <input class="additional-info__item-vitamins  additional-info__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins" value="vitamins">
-                <label class="additional-info__checkbox-label" for="vitamins">Витамины</label>
-              </li>
-            </ul>
-          </fieldset>
+          </form>
         </div>
-      </form>
-      <!-- Send a request button -->
-      <div class="program-form__button-wrapper">
-        <div class="container">
-          <button class="program-form__button-submit button">Отправить заявку</button>
-          <p class="program-form__text-required">* — Обязательные поля</p>
-        </div>
-      </div>
+      </section>
       <!-- Address -->
       <section class="address address--cat">
         <div class="container">
@@ -147,7 +142,6 @@
         <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1552167273582" style="border:0" allowfullscreen></iframe>
       </section>
     </main>
-
     <footer class="page-footer">
       <h2 class="page-footer__title visually-hidden">Мы в социальных сетях</h2>
       <!-- Social media icons -->
@@ -160,22 +154,22 @@
             <ul class="social__list">
               <li class="social__item social__item--vk">
                 <a class="social__item-link" href="#">
-                <span class="visually-hidden">Вконтакте</span>
+                  <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li class="social__item social__item--inst">
                 <a class="social__item-link" href="#">
-                <span class="visually-hidden">Инстаграм</span>
+                  <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>
               <li class="social__item social__item--fb">
                 <a class="social__item-link" href="#">
-                <span class="visually-hidden">Фейсбук</span>
+                  <span class="visually-hidden">Фейсбук</span>
                 </a>
               </li>
             </ul>
           </div>
-        <!-- Academy copyright -->
+          <!-- Academy copyright -->
           <div class="copyright">
             <a class="copyright__company-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
