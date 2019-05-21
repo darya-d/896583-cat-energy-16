@@ -1,8 +1,33 @@
 .button {
   font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   text-transform: uppercase;
-  color: #111111;
+  text-decoration: none;
+  display: block;
 
-  background-color: #ffffff;
+  width: 280px;
+  padding: 13px 0;
+  margin: auto;
+
+  color: #ffffff;
+  background-color: #68b738;
+  border: none;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: #90c56e;
+  }
+}
+
+@media (min-width: @width-tablet) {
+  .button {
+    width: 250px;
+  }
 }

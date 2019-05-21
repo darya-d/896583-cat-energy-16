@@ -1,3 +1,24 @@
 .burger {
-  background-color: #ffffff;
+  width: 19px;
+  height: 19px;
+  margin-left: 60px;
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  background: url("../img/icon-close.svg") no-repeat;
+}
+
+.burger--opened {
+  width: 25px;
+  height: 19px;
+
+  background: url("../img/icon-mobile-menu.svg") no-repeat;
+}
+
+@media (min-width: @width-tablet) {
+  .burger {
+    display: none;
+  }
 }
