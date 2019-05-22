@@ -126,7 +126,7 @@
   font-size: 16px;
 }
 
-.example__toggler-slider {
+.example__toggle-slider {
   width: 82px;
   height: 12px;
 
@@ -140,7 +140,7 @@
   background-color: #ffffff;
 }
 
-.example__toggler-button {
+.example__toggle-button {
   width: 35px;
   height: 6px;
 
@@ -163,6 +163,13 @@
   background: url("../img/before-mobile@1x.png") no-repeat center;
 }
 
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .example__cats {
+    background: url("../img/before-mobile@2x.png") no-repeat center;
+    background-size: 320px auto;
+  }
+}
+
 .example__cat-before,
 .example__cat-after {
   width: 50%;
@@ -177,12 +184,19 @@
   background: url("../img/after-tablet@1x.png") no-repeat 100% center;
 }
 
-@media (min-width: @width-tablet) {
-  .example__slider {
-    width: 768px;
-    margin: auto;
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  .example__cat-before {
+    background: url("../img/before-tablet@2x.png") no-repeat -5% center;
+    background-size: 690px auto;
   }
 
+  .example__cat-after {
+    background: url("../img/after-tablet@2x.png") no-repeat 100% center;
+    background-size: 690px auto;
+  }
+}
+
+@media (min-width: @width-tablet) {
   .example__cats {
     display: flex;
     justify-content: center;
@@ -194,6 +208,58 @@
     position: relative;
 
     background: none;
+  }
+
+  .example__toggle {
+    width: 569px;
+    font-size: 20px;
+    margin: auto;
+    padding-bottom: 72px;
+  }
+
+  .example__toggle-text {
+    cursor: pointer;
+    border-bottom: dotted 1px #cdcdcd;
+
+    &:hover {
+      border-bottom: solid 1px #999999;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+
+  .example__toggle-slider {
+    width: 428px;
+    height: 6px;
+
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+    border: 0;
+  }
+
+  .example__toggle-button {
+    left: 47%;
+    top: -14px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    background: radial-gradient(#68b738 0, #68b738 20%, #ffffff 20%, #ffffff 100%);
+    border: solid 1px #cdcdcd;
+  }
+
+  .example__toggle-button:hover {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .example__toggle-button:active {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+    border: solid 2px #68b738;
+    border-radius: 16px;
   }
 }
 
@@ -216,5 +282,17 @@
 
   .example__cat-after {
     background: url("../img/after-desktop@1x.png") no-repeat 100% center;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .example__cat-before {
+      background: url("../img/before-desktop@2x.png") no-repeat 32% center;
+      background-size: 690px auto;
+    }
+
+    .example__cat-after {
+      background: url("../img/after-desktop@2x.png") no-repeat 100% center;
+      background-size: 690px auto;
+    }
   }
 }

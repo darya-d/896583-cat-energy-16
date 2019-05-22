@@ -80,6 +80,13 @@
 
       background: url("../img/index-background-desktop@1x.jpg") no-repeat center / 100%;
     }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      &::after {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+        background-size: 720px auto;
+      }
+    }
   }
 
   .page-header--cat .main-nav__item-link {
