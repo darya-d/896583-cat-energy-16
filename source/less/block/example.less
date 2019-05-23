@@ -1,6 +1,11 @@
 // An example story + table
+.example {
+  margin-bottom: 31px;
+}
+
 .example__wrapper {
   background-color: #f2f2f2;
+  margin-bottom: 36px;
 }
 
 .example__title {
@@ -9,7 +14,9 @@
   line-height: 60px;
   text-align: left;
 
-  margin-bottom: 33px;
+  margin: 0;
+  margin-top: 63px;
+  margin-bottom: 23px;
 
   color: #111111;
 }
@@ -50,7 +57,6 @@
   .example__title {
     font-size: 60px;
 
-    // margin: 0;
     margin-bottom: 60px;
   }
 
@@ -81,6 +87,15 @@
 }
 
 @media (min-width: @width-desktop) {
+  .example {
+    width: 100%;
+    height: 558px;
+    padding: 0 0 97px;
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 29.5%, transparent 29.5%, transparent 100%), linear-gradient(to right, #f2f2f2 0%, #f2f2f2 80%, #eaeaea 80%, #eaeaea 100%);
+    display: flex;
+    justify-content: center;
+  }
+
   .example__wrapper {
     background-color: #f2f2f2;
   }
@@ -158,7 +173,7 @@
 
 .example__cats {
   height: 230px;
-  margin-bottom: 39px;
+  margin-bottom: 36px;
 
   background: url("../img/before-mobile@1x.png") no-repeat center;
 }
@@ -167,32 +182,6 @@
   .example__cats {
     background: url("../img/before-mobile@2x.png") no-repeat center;
     background-size: 320px auto;
-  }
-}
-
-.example__cat-before,
-.example__cat-after {
-  width: 50%;
-  height: 517px;
-}
-
-.example__cat-before {
-  background: url("../img/before-tablet@1x.png") no-repeat -5% center;
-}
-
-.example__cat-after {
-  background: url("../img/after-tablet@1x.png") no-repeat 100% center;
-}
-
-@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-  .example__cat-before {
-    background: url("../img/before-tablet@2x.png") no-repeat -5% center;
-    background-size: 690px auto;
-  }
-
-  .example__cat-after {
-    background: url("../img/after-tablet@2x.png") no-repeat 100% center;
-    background-size: 690px auto;
   }
 }
 
@@ -208,6 +197,32 @@
     position: relative;
 
     background: none;
+  }
+
+  .example__cat-before,
+  .example__cat-after {
+    width: 50%;
+    height: 517px;
+  }
+
+  .example__cat-before {
+    background: url("../img/before-tablet@1x.png") no-repeat -5% center;
+  }
+
+  .example__cat-after {
+    background: url("../img/after-tablet@1x.png") no-repeat 100% center;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    .example__cat-before {
+      background: url("../img/before-tablet@2x.png") no-repeat -5% center;
+      background-size: 690px auto;
+    }
+
+    .example__cat-after {
+      background: url("../img/after-tablet@2x.png") no-repeat 100% center;
+      background-size: 690px auto;
+    }
   }
 
   .example__toggle {

@@ -5,31 +5,6 @@
     <title>HTML Academy: Cat energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Pixel Glass -->
-    <style>
-      HTML {
-        background-repeat: no-repeat;
-        background-position:  50% 0;
-        /* Mobile layout by default */
-        background-image: url( "img/320.png" );
-      }
-      /* Tablet */
-      @media ( min-width: 760px ) {
-        HTML {
-          /* Tablet layout */
-          background-image: url( "img/760.png" );
-        }
-      }
-      /* Desktop */
-      @media ( min-width: 960px ) {
-        HTML {
-          /* Desktop layout */
-          background-image: url( "img/960.png" );
-        }
-      }
-      </style>
-      <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
-      <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
   <body>
 
@@ -76,14 +51,14 @@
               <fieldset class="program-form__field program-form__field--about-cat" title="Анкета кота">
                 <h3 class="visually-hidden">Анкета кота</h3>
                 <legend class="program-form__field-legend">Заполните анкету и мы подберем программу питания для вашего кота</legend>
-                <label class="program-form__field-label" for="name">Имя:<sup>*</sup>
-                  <input class="program-form__field-input" type="text" id="name" name="name" placeholder="Барсик">
+                <label class="program-form__field-label">Имя:<sup>*</sup>
+                  <input class="program-form__field-input" type="text" name="name" placeholder="Барсик">
                 </label>
-                <label class="program-form__field-label" for="weight">Вес (кг):<sup>*</sup>
-                  <input class="program-form__field-input" type="text" id="weight" name="weight" placeholder="7">
+                <label class="program-form__field-label">Вес (кг):<sup>*</sup>
+                  <input class="program-form__field-input" type="text" name="weight" placeholder="7">
                 </label>
-                <label class="program-form__field-label" for="age">Возраст (лет):
-                  <input class="program-form__field-input" type="text" id="age" name="age" placeholder="7">
+                <label class="program-form__field-label">Возраст (лет):
+                  <input class="program-form__field-input" type="text" name="age" placeholder="7">
                 </label>
               </fieldset>
               <!-- Purpose of the program -->
