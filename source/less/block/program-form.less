@@ -186,14 +186,28 @@
 //Users comments
 .program-form__field--comment {
   margin: auto;
+  margin-right: 120px;
 }
 
 .program-form__field--comment .program-form__field-title {
   width: 160px;
   margin-bottom: 35px;
-  padding-right: 20px;
 
   background-color: #ffffff;
+
+  position: relative;
+
+  &::after {
+    content: "";
+
+    height: 2px;
+    width: 100vw;
+    position: absolute;
+    top: 9%;
+    z-index: -2;
+
+    background-color: #68b738;
+  }
 }
 
 .program-form__field-textarea {
@@ -333,6 +347,10 @@
     margin-bottom: 32px;
   }
 
+  .program-form__field {
+    display: block;
+  }
+
   .program-form__wrapper-info {
     width: auto;
     margin-bottom: 63px;
@@ -456,6 +474,8 @@
   // Users comments
   .program-form__field--comment {
     margin-bottom: 37px;
+    margin-right: 0;
+    margin-left: 30px;
   }
 
   .program-form__field--comment .program-form__field-title {
@@ -466,6 +486,31 @@
     padding: 0;
 
     background-color: #ffffff;
+
+    &::before {
+      content: "";
+
+      height: 2px;
+      width: 100vw;
+      position: absolute;
+      top: 12%;
+      right: 0;
+      z-index: -1;
+
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+
+      height: 2px;
+      width: 100vw;
+      position: absolute;
+      top: 12%;
+      z-index: -2;
+
+      background-color: #68b738;
+    }
   }
 
   .program-form__field-textarea {
@@ -598,8 +643,9 @@
   }
 
   .program-form__field--contacts .program-form__field-title {
+    padding: 0 40px;
+    margin-left: -20px;
     margin-bottom: 75px;
-    padding-left: 40px;
   }
 
   .program-form__wrapper-contacts {
@@ -625,7 +671,8 @@
   }
 
   .program-form__field--comment .program-form__field-title {
-    padding-left: 40px;
+    padding: 0 40px;
+    margin-left: -20px;
     margin-bottom: 75px;
   }
 
@@ -633,7 +680,7 @@
     width: 1178px;
     height: 161px;
 
-    margin-left: 40px;
+    margin-left: 22px;
   }
 
   // Additional info
@@ -645,8 +692,9 @@
   }
 
   .program-form__field--extra .program-form__field-title {
+    padding: 0 40px;
+    margin-left: -20px;
     margin-bottom: 66px;
-    padding-left: 40px;
   }
 
   .program-form__wrapper-extra {

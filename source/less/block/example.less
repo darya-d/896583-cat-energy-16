@@ -15,7 +15,6 @@
   text-align: left;
 
   margin: 0;
-  margin-top: 63px;
   margin-bottom: 23px;
 
   color: #111111;
@@ -65,6 +64,7 @@
     line-height: 24px;
 
     width: 676px;
+    margin-bottom: 55px;
   }
 
   .example__wrapper-tabl {
@@ -73,11 +73,11 @@
     align-items: center;
 
     min-height: 84px;
-    padding: 18px 0;
   }
 
   .example__cost {
     width: 174px;
+    margin-bottom: 103px;
     text-align: right;
   }
 
@@ -91,13 +91,20 @@
     width: 100%;
     height: 558px;
     padding: 0 0 97px;
-    background: linear-gradient(to bottom, #ffffff 0, #ffffff 29.5%, transparent 29.5%, transparent 100%), linear-gradient(to right, #f2f2f2 0%, #f2f2f2 80%, #eaeaea 80%, #eaeaea 100%);
+    margin-bottom: 0;
+
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 29.5%, transparent 29.5%, transparent 100%), linear-gradient(to right, #f2f2f2 0%, #f2f2f2 71%, #eaeaea 71%, #eaeaea 100%);
     display: flex;
     justify-content: center;
   }
 
   .example__wrapper {
-    background-color: #f2f2f2;
+    background-color: transparent;
+  }
+
+  .example__wrapper .container {
+    padding: 0;
+    margin-left: -135px;
   }
 
   .example__title {
@@ -121,6 +128,7 @@
     padding-left: 0;
   }
 }
+
 
 // Slider
 .example__slider {
@@ -186,6 +194,10 @@
 }
 
 @media (min-width: @width-tablet) {
+  .example__slider {
+    background: linear-gradient(to bottom, #ffffff 0, #ffffff 27%, transparent 27%, transparent 100%), linear-gradient(to left, #eaeaea 0, #eaeaea 50%, #f2f2f2 50%, #f2f2f2 100%), linear-gradient(#ffffff 0, #ffffff 50%, #f2f2f2 50%, #f2f2f2 100%);
+  }
+
   .example__cats {
     display: flex;
     justify-content: center;
@@ -210,7 +222,7 @@
   }
 
   .example__cat-after {
-    background: url("../img/after-tablet@1x.png") no-repeat 100% center;
+    background: url("../img/after-tablet@1x.png") no-repeat 101% center;
   }
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
@@ -220,7 +232,7 @@
     }
 
     .example__cat-after {
-      background: url("../img/after-tablet@2x.png") no-repeat 100% center;
+      background: url("../img/after-tablet@2x.png") no-repeat 101% center;
       background-size: 690px auto;
     }
   }
@@ -286,27 +298,44 @@
     background: none;
   }
 
+  .example__slider .container {
+    padding-left: 0;
+  }
+
+  .example__wrapper-slider {
+    width: 708px;
+    margin-left: 146px;
+    margin-top: -58px;
+  }
+
   .example__cats {
     width: auto;
     margin-bottom: -1px;
   }
 
+  .example__toggle {
+    margin-top: 36px;
+  }
+
   .example__cat-before {
-    background: url("../img/before-desktop@1x.png") no-repeat 32% center;
+    background: url("../img/before-desktop@1x.png") no-repeat 3% center;
   }
 
   .example__cat-after {
-    background: url("../img/after-desktop@1x.png") no-repeat 100% center;
+    background: url("../img/after-desktop@1x.png") no-repeat 109% center,
+      linear-gradient(to bottom, #ffffff 0, #ffffff 37%, transparent 37%, transparent 63%),
+      linear-gradient(to left, #eaeaea 0, #eaeaea 45%, #f2f2f2 45%, #f2f2f2 100%),
+      #eaeaea;
   }
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     .example__cat-before {
-      background: url("../img/before-desktop@2x.png") no-repeat 32% center;
+      background: url("../img/before-desktop@2x.png") no-repeat 3% center;
       background-size: 690px auto;
     }
 
     .example__cat-after {
-      background: url("../img/after-desktop@2x.png") no-repeat 100% center;
+      background: url("../img/after-desktop@2x.png") no-repeat 109% center;
       background-size: 690px auto;
     }
   }
