@@ -7,17 +7,17 @@
 }
 
 .catalog__item {
-  // width: 320px;
+  width: 320px;
   padding-bottom: 24px;
   margin-top: -1px;
 
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .catalog__wrapper {
   display: flex;
   margin: auto;
+  margin-bottom: -4px;
 }
 
 .catalog__description-title {
@@ -48,12 +48,17 @@
   border-spacing: 0 2px;
 }
 
+.catalog__img {
+  margin-left: 19px;
+}
+
 .catalog__description-wrapper {
   width: 140px;
 }
 
 // To all products
 .catalog__more {
+  width: 320px;
   padding-top: 68px;
   padding-bottom: 24px;
   margin-top: -1px;
@@ -104,9 +109,13 @@
 // Buttons
 .catalog__button-order {
   width: 280px;
+  padding: 10px 0;
 }
 
 .catalog__button-to-all {
+  width: 280px;
+  padding: 10px 0;
+
   color: #444444;
   background-color: #f2f2f2;
 }
@@ -221,12 +230,12 @@
       background-repeat: no-repeat;
       opacity: 0.2;
     }
+  }
 
-    .catalog__button-order,
-    .catalog__button-to-all {
-      width: 249px;
-      margin: 0 auto;
-    }
+  .catalog__button-order,
+  .catalog__button-to-all {
+    width: 249px;
+    margin: 0 auto;
   }
 
   .catalog__more-tastes {
