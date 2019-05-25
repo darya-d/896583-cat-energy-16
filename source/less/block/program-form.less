@@ -71,6 +71,7 @@
 .program-form__field-label,
 .program-form__field-input {
   font-weight: 400;
+  font-family: @font-oswald;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -82,8 +83,6 @@
 
   margin-bottom: 11px;
 
-  position: relative;
-
   color: #222222;
 }
 
@@ -92,8 +91,27 @@
   font-size: 100%;
 }
 
+.program-form__field-label--mail {
+  position: relative;
+}
+
+.program-form__field-label--phone {
+  position: relative;
+}
+
+.program-form__field-label--mail svg {
+  position: absolute;
+  left: 246px;
+  top: 16px;
+}
+
+.program-form__field-label--phone svg {
+  position: absolute;
+  left: 246px;
+  top: 16px;
+}
+
 .program-form__field-input {
-  // box-sizing: border-box;
   padding: 14px;
   margin-left: 16px;
   flex-grow: 1;
@@ -111,8 +129,16 @@
     border: solid 2px #444444;
   }
 
+  &:focus + svg {
+    fill: #68b738;
+  }
+
   &:invalid {
     border: solid 2px #ff8282;
+  }
+
+  &:invalid + svg {
+    fill: #ff8282;
   }
 }
 
@@ -211,7 +237,8 @@
 }
 
 .program-form__field-textarea {
-  font-family: 400;
+  font-weight: 400;
+  font-family: @font-oswald;
   font-size: 16px;
   text-transform: uppercase;
 
@@ -466,10 +493,15 @@
     margin-left: 20px;
   }
 
-  // Добавить svg
-  // .program-form__field-label--phone {
-  //   position: relative;
-  // }
+  .program-form__field-label--mail svg {
+    left: 595px;
+    top: 18px;
+  }
+
+  .program-form__field-label--phone svg {
+    left: 596px;
+    top: 15px;
+  }
 
   // Users comments
   .program-form__field--comment {
@@ -660,6 +692,14 @@
 
   .program-form__wrapper-contacts .program-form__field-label:first-child {
     margin-right: 80px;
+  }
+
+  .program-form__field-label--mail svg {
+    left: 535px;
+  }
+
+  .program-form__field-label--phone svg {
+    left: 536px;
   }
 
   .program-form__field--comment {

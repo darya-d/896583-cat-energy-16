@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!-- SVG sprite -->
+    <div style="display:none">
+      <include src="img/sprite.svg"></include>
+    </div>
 
     <header class="page-header page-header--cat">
       <div class="container container--full">
@@ -162,17 +166,20 @@
             <ul class="social__list">
               <li class="social__item social__item--vk">
                 <a class="social__item-link" href="#">
-                <span class="visually-hidden">Вконтакте</span>
+                  <span class="visually-hidden">Вконтакте</span>
+                  <svg width="22" height="12"><use xlink:href="#icon-vk"></use></svg>
                 </a>
               </li>
               <li class="social__item social__item--inst">
                 <a class="social__item-link" href="#">
-                <span class="visually-hidden">Инстаграм</span>
+                  <span class="visually-hidden">Инстаграм</span>
+                  <svg width="17" height="17"><use xlink:href="#icon-insta"></use></svg>
                 </a>
               </li>
               <li class="social__item social__item--fb">
                 <a class="social__item-link" href="#">
-                <span class="visually-hidden">Фейсбук</span>
+                  <span class="visually-hidden">Фейсбук</span>
+                  <svg width="10" height="19"><use xlink:href="#icon-fb"></use></svg>
                 </a>
               </li>
             </ul>
@@ -180,8 +187,8 @@
         <!-- Academy copyright -->
           <div class="copyright">
             <a class="copyright__company-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__logo-link">
-              <img class="copyright__logo" src="img/htmlacademy.svg" width="27px" height="34px" alt="Логотип HTML Academy">
+            <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" title="Логотип HTML Academy">
+              <svg width="40" height="40"><use xlink:href="#htmlacademy"></use></svg>
             </a>
           </div>
         </div>
