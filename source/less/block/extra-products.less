@@ -11,28 +11,30 @@
   position: relative;
   display: inline;
 
-  width: 246px;
+  width: 247px;
+  margin-top: 0;
+  margin-bottom: 34px;
 
   color: #111111;
   background-color: #ffffff;
-}
 
-.extra-products__title::after {
-  content: "";
+  &::after {
+    content: "";
 
-  height: 2px;
-  width: 100vw;
-  position: absolute;
-  top: 50%;
-  z-index: -1;
+    height: 3px;
+    width: 100vw;
+    position: absolute;
+    top: 60%;
+    z-index: -1;
 
-  background-color: #68b738;
+    background-color: #68b738;
+  }
 }
 
 .extra-products__list {
   .reset-list();
 
-  margin-bottom: 60px;
+  margin-bottom: 39px;
 }
 
 .extra-products__item {
@@ -59,14 +61,19 @@
   line-height: 16px;
   text-transform: uppercase;
 
-  margin-bottom: 6px;
+  margin-top: 0;
+  margin-bottom: 12px;
 
   color: #222222;
 }
 
+.extra-products__button-order {
+  padding: 10px 0;
+}
+
 @media (min-width: @width-tablet) {
-  .extra-products__wrapper {
-    margin-top: 45px;
+  .extra-products {
+    margin-top: -104px;
   }
 
   .extra-products__list {
@@ -77,29 +84,35 @@
     font-size: 36px;
     line-height: 36px;
 
-    width: 440px;
-    padding-left: 55px;
+    width: 411px;
+    padding-left: 37px;
+    margin-bottom: 35px;
 
     &::before {
       content: "";
 
-      height: 2px;
+      height: 3px;
       width: 100vw;
 
       position: absolute;
-      top: 50%;
+      top: 63%;
       right: 0;
       z-index: -1;
 
       background-color: #68b738;
     }
+
+    &::after {
+      top: 63%;
+    }
   }
 
   .extra-products__item {
     width: 708px;
+    height: 140px;
     margin: auto;
     margin-bottom: -1px;
-    padding: 18px 0 25px;
+    padding: 23px 0 24px;
 
     background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -111,7 +124,7 @@
     align-items: center;
 
     width: 633px;
-    margin-bottom: 20px;
+    margin-bottom: 11px;
   }
 
   .extra-products__name {
@@ -129,11 +142,12 @@
 
 @media (min-width: @width-desktop) {
   .extra-products {
-    padding-bottom: 86px;
+    padding-bottom: 53px;
   }
 
   .extra-products__title {
-    margin-top: 12px;
+    margin-top: 8px;
+    margin-left: -38px;
   }
 
   .extra-products__wrapper {
@@ -153,8 +167,9 @@
     justify-content: space-between;
 
     width: 895px;
-    padding-top: 15px;
-    padding-bottom: 16px;
+    height: 72px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     margin-left: 0;
 
     border-left: none;
