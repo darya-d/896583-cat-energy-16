@@ -82,7 +82,7 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-// Копирование файлов в папку build  
+// Копирование файлов в папку build
 gulp.task("copy", function () {
   return gulp.src([
       "source/fonts/**/*.{woff,woff2}",
@@ -115,6 +115,6 @@ gulp.task("build", gulp.series(
 ));
 
 gulp.task("start", gulp.series(
-  "build", 
+  "build",
   "server"
 ));
