@@ -5,8 +5,8 @@
   justify-content: space-between;
 
   font-size: 16px;
-  padding-top: 20px;
-  padding-bottom: 21px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 
   &:active {
     opacity: 0.3;
@@ -22,6 +22,16 @@
   color: #444444;
 }
 
+.copyright__logo svg {
+  fill: #666666;
+  margin-top: 4px;
+  margin-right: -6px;
+
+  &:hover {
+    fill: #68b738;
+  }
+}
+
 @media (min-width: @width-tablet) {
   .copyright {
     width: auto;
@@ -30,7 +40,11 @@
   }
 
   .copyright__company-name {
-    margin-right: 20px;
+    margin-right: 16px;
+  }
+
+  .copyright__logo svg {
+    margin-right: -7px;
   }
 }
 

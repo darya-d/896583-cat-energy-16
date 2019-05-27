@@ -1,14 +1,17 @@
+.program-form {
+  padding-bottom: 11px;
+}
+
 .program-form__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 
   margin-bottom: 20px;
 }
 
 .program-form__field {
-  display: flex;
-  flex-direction: column;
+  display: block;
 
   padding: 0;
   padding-bottom: 9px;
@@ -19,7 +22,7 @@
 }
 
 .program-form__wrapper-info {
-  margin-bottom: 14px;
+  margin-bottom: 28px;
   width: 322px;
 }
 
@@ -31,9 +34,9 @@
 
   width: 280px;
 
-  padding-bottom: 39px;
-  margin-bottom: 0;
-  padding-top: 0;
+  padding: 0;
+  margin-left: 1px;
+  margin-bottom: 37px;
 
   color: #111111;
 }
@@ -50,27 +53,28 @@
 
   margin: 0;
   padding-top: 0;
-  padding-right: 30px;
+  padding-right: 23px;
 
   color: #111111;
   background-color: #ffffff;
-}
 
-.program-form__field-title::after {
-  content: "";
+  &::after {
+    content: "";
 
-  height: 2px;
-  width: 100vw;
-  position: absolute;
-  top: 50%;
-  z-index: -2;
+    height: 3px;
+    width: 100vw;
+    position: absolute;
+    top: 55%;
+    z-index: -2;
 
-  background-color: #68b738;
+    background-color: #68b738;
+  }
 }
 
 .program-form__field-label,
 .program-form__field-input {
   font-weight: 400;
+  font-family: @font-oswald;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
@@ -82,8 +86,6 @@
 
   margin-bottom: 11px;
 
-  position: relative;
-
   color: #222222;
 }
 
@@ -92,8 +94,27 @@
   font-size: 100%;
 }
 
+.program-form__field-label--mail {
+  position: relative;
+}
+
+.program-form__field-label--phone {
+  position: relative;
+}
+
+.program-form__field-label--mail svg {
+  position: absolute;
+  left: 246px;
+  top: 16px;
+}
+
+.program-form__field-label--phone svg {
+  position: absolute;
+  left: 246px;
+  top: 16px;
+}
+
 .program-form__field-input {
-  // box-sizing: border-box;
   padding: 14px;
   margin-left: 16px;
   flex-grow: 1;
@@ -111,21 +132,36 @@
     border: solid 2px #444444;
   }
 
+  &:focus + svg {
+    fill: #68b738;
+  }
+
   &:invalid {
     border: solid 2px #ff8282;
   }
+
+  &:invalid + svg {
+    fill: #ff8282;
+  }
+}
+
+.program-form__wrapper-field {
+  margin-bottom: 16px;
 }
 
 // Profile of the cat
 .program-form__field--about-cat {
   width: 280px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-bottom: 0;
+  margin-bottom: 11px;
 }
 
 // Purpose of the program
 .program-form__field--purpose {
-  padding: 29px 20px 25px 66px;
+  padding: 27px 20px 3px 66px;
+  margin-left: -20px;
+  margin-right: 20px;
+  margin-bottom: 14px;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
@@ -165,6 +201,10 @@
 }
 
 //Users contacts
+.program-form__wrapper-contacts {
+  margin-top: 24px;
+}
+
 .program-form__field--contacts {
   padding: 0;
   margin: auto;
@@ -172,11 +212,16 @@
 
 .program-form__field--contacts .program-form__field-title {
   width: 230px;
+  padding: 0;
 
   margin-bottom: 32px;
-  padding-right: 20px;
 
   background-color: #ffffff;
+
+  &::after {
+    content: "";
+    top: 32%;
+  }
 }
 
 .program-form__field--contacts .program-form__field-input {
@@ -186,7 +231,6 @@
 //Users comments
 .program-form__field--comment {
   margin: auto;
-  margin-right: 120px;
 }
 
 .program-form__field--comment .program-form__field-title {
@@ -194,29 +238,17 @@
   margin-bottom: 35px;
 
   background-color: #ffffff;
-
-  position: relative;
-
-  &::after {
-    content: "";
-
-    height: 2px;
-    width: 100vw;
-    position: absolute;
-    top: 9%;
-    z-index: -2;
-
-    background-color: #68b738;
-  }
 }
 
 .program-form__field-textarea {
-  font-family: 400;
+  font-weight: 400;
+  font-family: @font-oswald;
   font-size: 16px;
   text-transform: uppercase;
 
   width: 280px;
-  padding: 13px 10px 10px 15px;
+  padding: 9px 10px 19px 15px;
+  margin-top: 31px;
 
   color: #ffffff;
   border: solid 1px rgba(0, 0, 0, 0.1);
@@ -226,22 +258,33 @@
 
 // Additional info
 .program-form__field--extra {
-  padding-bottom: 31px;
   margin: auto;
+  margin-bottom: 23px;
 }
 
 .program-form__field--extra .program-form__field-title {
   width: 185px;
   margin-bottom: 41px;
-  padding-right: 20px;
 
   background-color: #ffffff;
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 100vw;
+    position: absolute;
+    top: 52%;
+    z-index: -2;
+    background-color: #68b738;
+  }
 }
 
 .program-form__wrapper-extra {
   display: flex;
   flex-direction: column;
+
   width: 280px;
+  margin-top: 34px;
 }
 
 .program-form__field-label--extra {
@@ -328,32 +371,35 @@
   line-height: 20px;
   text-transform: uppercase;
 
+  width: 280px;
+  padding: 10px 0;
+
   color: #ffffff;
   background-color: #68b738;
 }
 
 .program-form__request {
-  display: block;
-
   font-family: @font-arial;
+  font-size: 14px;
+  line-height: 16px;
   text-align: center;
 
-  margin-top: 23px;
+  margin-top: 18px;
 }
 
 
 @media (min-width: @width-tablet) {
-  .program-form__form {
-    margin-bottom: 32px;
+  .program-form {
+    padding-bottom: 2px;
   }
 
-  .program-form__field {
-    display: block;
+  .program-form__form {
+    margin-bottom: 66px;
   }
 
   .program-form__wrapper-info {
     width: auto;
-    margin-bottom: 63px;
+    margin-bottom: 75px;
   }
 
   .program-form__field-legend {
@@ -361,9 +407,9 @@
     line-height: 30px;
 
     width: 330px;
-    padding-bottom: 66px;
+    padding-bottom: 0;
+    margin-bottom: 65px;
   }
-
 
   .program-form__text {
     font-size: 20px;
@@ -376,13 +422,12 @@
 
     position: relative;
     z-index: 1;
-    padding: 0 20px;
   }
 
   .program-form__field-title::before {
     content: "";
 
-    height: 2px;
+    height: 3px;
     width: 100vw;
     position: absolute;
     top: 50%;
@@ -399,12 +444,15 @@
   }
 
   .program-form__field-label {
-    margin-bottom: 20px;
     width: auto;
+
+    margin-bottom: 20px;
+    margin-left: 2px;
   }
 
   .program-form__field-input {
     height: 52px;
+    padding: 18px;
   }
 
   .rogram-form__field-input::placeholder {
@@ -415,11 +463,12 @@
   .program-form__field--about-cat {
     width: 630px;
     padding: 0;
-    margin-bottom: 45px;
+    margin: 0 auto;
+    margin-bottom: 53px;
   }
 
   .program-form__field--about-cat .program-form__field-input {
-    margin-left: 20px;
+    margin-left: 18px;
   }
 
   // Purpose of the program
@@ -427,11 +476,16 @@
     width: 630px;
     min-height: 196px;
 
-    padding-top: 36px;
+    padding-top: 33px;
+    padding-left: 90px;
+
+    margin: 0 auto;
+    margin-bottom: 14px;
   }
 
   .program-form__field--purpose .program-form__field-label {
-    padding-bottom: 30px;
+    padding-bottom: 33px;
+    margin-left: 0;
 
     &::before {
       width: 38px;
@@ -449,32 +503,50 @@
   // Users contacts
   .program-form__field--contacts {
     width: 630px;
-    margin-bottom: 30px;
+    margin-bottom: 47px;
   }
 
   .program-form__field--contacts .program-form__field-title {
     font-size: 36px;
 
-    width: 588px;
+    width: 561px;
     padding: 0;
-    margin-bottom: 75px;
+    padding-right: 42px;
+    padding-left: 38px;
+    margin-left: -38px;
 
     background-color: #ffffff;
+
+    &::after {
+      top: 59%;
+    }
+
+    &::before {
+      top: 59%;
+    }
+  }
+
+  .program-form__wrapper-contacts {
+    margin-top: 70px;
   }
 
   .program-form__field--contacts .program-form__field-input {
     margin-left: 20px;
   }
 
-  // Добавить svg
-  // .program-form__field-label--phone {
-  //   position: relative;
-  // }
+  .program-form__field-label--mail svg {
+    left: 595px;
+    top: 18px;
+  }
+
+  .program-form__field-label--phone svg {
+    left: 596px;
+    top: 15px;
+  }
 
   // Users comments
   .program-form__field--comment {
-    margin-bottom: 37px;
-    margin-right: 0;
+    margin-bottom: 51px;
     margin-left: 30px;
   }
 
@@ -482,34 +554,18 @@
     font-size: 36px;
 
     width: 257px;
+    padding: 0 40px;
+    margin-left: -30px;
     margin-bottom: 76px;
-    padding: 0;
 
     background-color: #ffffff;
 
     &::before {
-      content: "";
-
-      height: 2px;
-      width: 100vw;
-      position: absolute;
-      top: 12%;
-      right: 0;
-      z-index: -1;
-
-      background-color: #68b738;
+      top: 62%;
     }
 
     &::after {
-      content: "";
-
-      height: 2px;
-      width: 100vw;
-      position: absolute;
-      top: 12%;
-      z-index: -2;
-
-      background-color: #68b738;
+      top: 62%;
     }
   }
 
@@ -517,22 +573,34 @@
     font-size: 20px;
 
     width: 630px;
-    padding: 14px 20px;
-    padding-bottom: 0;
+    padding-top: 9px;
+    padding-left: 18px;
+    padding-bottom: 13px;
+    margin-top: 75px;
+    margin-left: 10px;
   }
 
   // Additional info
   .program-form__field--extra {
-    padding-bottom: 13px;
+    margin-bottom: 16px;
   }
 
   .program-form__field--extra .program-form__field-title {
     width: 289px;
     font-size: 36px;
-    margin-bottom: 67px;
-    padding: 0;
+    padding-right: 42px;
+    padding-left: 40px;
+    margin-left: -1px;
 
     background-color: #ffffff;
+
+    &::before {
+      top: 55%;
+    }
+
+    &::after {
+      top: 55%;
+    }
   }
 
   .program-form__wrapper-extra {
@@ -540,7 +608,9 @@
     flex-wrap: wrap;
 
     width: 630px;
-    margin-left: 15px;
+    margin-left: 48px;
+    margin-top: 62px;
+    margin-bottom: 8px;
   }
 
   .program-form__field-label--extra {
@@ -559,7 +629,7 @@
   }
 
   .program-form__field-label--extra:nth-child(odd) {
-    margin-right: 100px;
+    margin-right: 142px;
   }
 
   // Checkboxes
@@ -585,28 +655,34 @@
     align-items: center;
 
     width: 631px;
-    padding-bottom: 10px;
-    padding-left: 4px;
+    margin-top: -16px;
+    margin-left: 4px;
   }
 
   .program-form__button-submit {
     font-size: 20px;
 
     width: 283px;
-    padding: 13px 0;
+    padding: 16px 0;
     margin: 0;
-    margin-left: -10px;
     margin-right: 63px;
+    margin-left: 37px;
+    margin-bottom: 8px;
   }
 
   .program-form__request {
     font-size: 16px;
 
     margin: 0;
+    margin-bottom: 14px;
   }
 }
 
 @media (min-width: @width-desktop) {
+  .program-form {
+    padding-bottom: 34px;
+  }
+
   .program-form__form {
     margin-bottom: 42px;
   }
@@ -614,7 +690,11 @@
   .program-form__wrapper-info {
     display: flex;
 
-    width: 1220px;
+    margin-bottom: 49px;
+  }
+
+  .program-form__field-label {
+    margin-left: 0;
   }
 
   .program-form__field--about-cat {
@@ -640,18 +720,18 @@
     width: 1260px;
     padding-left: 0;
     padding-right: 40px;
+    margin-bottom: 48px;
   }
 
   .program-form__field--contacts .program-form__field-title {
     padding: 0 40px;
-    margin-left: -20px;
+    margin-left: -41px;
     margin-bottom: 75px;
   }
 
   .program-form__wrapper-contacts {
     display: flex;
     width: auto;
-    padding-left: 40px;
   }
 
   .program-form__wrapper-contacts .program-form__field-label {
@@ -662,51 +742,57 @@
     margin-right: 80px;
   }
 
+  .program-form__field-label--mail svg {
+    left: 535px;
+  }
+
+  .program-form__field-label--phone svg {
+    left: 536px;
+  }
+
   .program-form__field--comment {
     width: 1260px;
     margin: auto;
     padding-left: 0;
-    padding-right: 40px;
-    padding-bottom: 12px;
+    margin-bottom: 53px;
   }
 
   .program-form__field--comment .program-form__field-title {
     padding: 0 40px;
-    margin-left: -20px;
+    margin-left: -40px;
     margin-bottom: 75px;
   }
 
   .program-form__field-textarea {
-    width: 1178px;
-    height: 161px;
+    width: 1221px;
+    height: 175px;
 
-    margin-left: 22px;
+    margin-left: 0;
   }
 
   // Additional info
   .program-form__field--extra {
     width: 1260px;
-    padding-left: 0;
-    padding-right: 40px;
     margin: auto;
   }
 
   .program-form__field--extra .program-form__field-title {
     padding: 0 40px;
-    margin-left: -20px;
+    margin-left: -41px;
     margin-bottom: 66px;
   }
 
   .program-form__wrapper-extra {
     width: 1220px;
 
-    margin-left: 54px;
+    margin-left: 13px;
+    margin-bottom: 5px;
   }
 
   .program-form__field-label--extra {
     padding-bottom: 0;
     margin-bottom: 58px;
-    margin-right: 100px;
+    margin-right: 145px;
     width: 180px;
   }
 
@@ -714,16 +800,23 @@
     margin-right: 0;
   }
 
+  .program-form__field-label--extra:nth-child(odd) {
+    margin-right: 145;
+  }
+
+  .program-form__request {
+    margin-bottom: 15px;
+  }
   // Send a request button
   .program-form__wrapper-request {
     width: 1260px;
-    padding-left: 40px;
   }
 
   .program-form__button-submit {
     font-size: 20px;
 
     width: 568px;
-    // margin: 0;
+    margin-left: 0;
+    margin-right: 80px;
   }
 }
