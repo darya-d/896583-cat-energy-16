@@ -25,7 +25,7 @@
             </a>
             <button class="burger burger--opened" type="button" aria-label="Открыть главное меню"></button>
           </div>
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--no-js">
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a class="main-nav__item-link" href="index.html">Главная</a>
@@ -54,7 +54,7 @@
               <!-- Profile of the cat -->
               <fieldset class="program-form__field program-form__field--about-cat" title="Анкета кота">
                 <h3 class="visually-hidden">Анкета кота</h3>
-                <legend class="program-form__field-legend">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</legend>
+                <p class="program-form__field-text">Заполните анкету и мы подберем программу&nbsp;питания для вашего кота</p>
                 <label class="program-form__field-label">Имя:<sup>*</sup>
                   <input class="program-form__field-input" type="text" name="Имя" value="Барсик" placeholder="Имя">
                 </label>
@@ -84,7 +84,7 @@
             <!-- Users contacts -->
             <div class="program-form__wrapper-field">
               <fieldset class="program-form__field program-form__field--contacts">
-                <h3 class="program-form__field-title">Контактные данные (владельца кота)</h3>
+                <h3 class="program-form__field-title"><span class="program-form__field-empty">Контактные данные (владельца кота)</span></h3>
                 <div class="program-form__wrapper-contacts">
                   <label class="program-form__field-label program-form__field-label--mail">E-mail:<sup>*</sup>
                     <input class="program-form__field-input" type="email" name="textfield" value="kuklachev@gmail.com" placeholder="E-mail" required="">
@@ -100,14 +100,14 @@
             <!-- Users comments -->
             <div class="program-form__wrapper-field">
               <fieldset class="program-form__field program-form__field--comment">
-                <label class="program-form__field-title" for="user-comment">Комментарий</label>
+                <label class="program-form__field-title" for="user-comment"><span class="program-form__field-empty">Комментарий</span></label>
                 <textarea class="program-form__field-textarea" name="user-comment" id="user-comment" rows="5" cols="10" placeholder="Расскажите обо всех повадках кота"></textarea>
               </fieldset>
             </div>
             <!-- Additional info -->
             <div class="program-form__wrapper-field">
               <fieldset class="program-form__field program-form__field--extra">
-                <h3 class="program-form__field-title">Дополнительно</h3>
+                <h3 class="program-form__field-title"><span class="program-form__field-empty">Дополнительно</span></h3>
                 <div class="program-form__wrapper-extra">
                   <label class="program-form__field-label program-form__field-label--extra">
                     <input class="program-form__field-checkbox visually-hidden" type="checkbox" checked="">
@@ -199,12 +199,12 @@
       var burger = document.querySelector(".burger");
 
       document.addEventListener("DOMContentLoaded", function(event) {
-        nav.classList.remove("main-nav--show");
+        nav.classList.remove("main-nav--no-js");
         burger.classList.add("burger--opened");
       });
 
       burger.addEventListener("click", function(event) {
-        nav.classList.toggle("main-nav--show");
+        nav.classList.toggle("main-nav--no-js");
         burger.classList.toggle("burger--opened");
       });
     </script>

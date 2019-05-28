@@ -9,31 +9,37 @@
   line-height: 24px;
 
   position: relative;
-  display: inline;
 
-  width: 247px;
   margin-top: 0;
   margin-bottom: 34px;
 
   color: #111111;
-  background-color: #ffffff;
 
   &::after {
     content: "";
-
-    height: 3px;
-    width: 100vw;
     position: absolute;
-    top: 60%;
+
+    width: 100vw;
+    height: 3px;
+    top: 55%;
     z-index: -1;
 
     background-color: #68b738;
   }
 }
 
+.extra-products__empty {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 22px;
+  margin-left: -15px;
+
+  background-color: #ffffff;
+  z-index: 10;
+}
+
 .extra-products__list {
   .reset-list();
-
   margin-bottom: 39px;
 }
 
@@ -84,7 +90,6 @@
     font-size: 36px;
     line-height: 36px;
 
-    width: 411px;
     padding-left: 37px;
     margin-bottom: 35px;
 

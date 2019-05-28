@@ -3,10 +3,6 @@
 }
 
 .program-form__form {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
   margin-bottom: 20px;
 }
 
@@ -26,7 +22,7 @@
   width: 322px;
 }
 
-.program-form__field-legend {
+.program-form__field-text {
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -35,6 +31,7 @@
   width: 280px;
 
   padding: 0;
+  margin-top: 0;
   margin-left: 1px;
   margin-bottom: 37px;
 
@@ -47,7 +44,6 @@
   line-height: 24px;
   text-transform: none;
 
-  display: inline;
   position: relative;
   z-index: 1;
 
@@ -56,19 +52,29 @@
   padding-right: 23px;
 
   color: #111111;
-  background-color: #ffffff;
 
   &::after {
     content: "";
 
+    position: absolute;
+
     height: 3px;
     width: 100vw;
-    position: absolute;
     top: 55%;
     z-index: -2;
 
     background-color: #68b738;
   }
+}
+
+.program-form__field-empty {
+  position: relative;
+  padding-left: 15px;
+  padding-right: 22px;
+  margin-left: -15px;
+
+  background-color: #ffffff;
+  z-index: 10;
 }
 
 .program-form__field-label,
@@ -202,7 +208,7 @@
 
 //Users contacts
 .program-form__wrapper-contacts {
-  margin-top: 24px;
+  margin-top: 32px;
 }
 
 .program-form__field--contacts {
@@ -210,18 +216,18 @@
   margin: auto;
 }
 
-.program-form__field--contacts .program-form__field-title {
+.program-form__field-title {
   width: 230px;
   padding: 0;
-
-  margin-bottom: 32px;
-
-  background-color: #ffffff;
 
   &::after {
     content: "";
     top: 32%;
   }
+}
+
+.program-form__field--contacts .program-form__field-empty {
+  padding-right: 46px;
 }
 
 .program-form__field--contacts .program-form__field-input {
@@ -238,6 +244,10 @@
   margin-bottom: 35px;
 
   background-color: #ffffff;
+
+  &::after {
+    top: 55%;
+  }
 }
 
 .program-form__field-textarea {
@@ -250,10 +260,18 @@
   padding: 9px 10px 19px 15px;
   margin-top: 31px;
 
-  color: #ffffff;
+  color: #444444;
   border: solid 1px rgba(0, 0, 0, 0.1);
 
   resize: none;
+
+  &:hover {
+    border: solid 1px #cdcdcd;
+  }
+
+  &:focus {
+    border: solid 2px #444444;
+  }
 }
 
 // Additional info
@@ -402,7 +420,7 @@
     margin-bottom: 75px;
   }
 
-  .program-form__field-legend {
+  .program-form__field-text {
     font-size: 20px;
     line-height: 30px;
 
@@ -422,19 +440,31 @@
 
     position: relative;
     z-index: 1;
-  }
 
-  .program-form__field-title::before {
-    content: "";
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
 
-    height: 3px;
-    width: 100vw;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    z-index: -1;
+      width: 100vw;
+      height: 3px;
+      top: 63%;
+      right: 0;
 
-    background-color: #68b738;
+      background-color: #68b738;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+
+      width: 100vw;
+      height: 3px;
+      top: 63%;
+
+      background-color: #68b738;
+    }
   }
 
   .program-form__field-label,
@@ -507,27 +537,22 @@
   }
 
   .program-form__field--contacts .program-form__field-title {
-    font-size: 36px;
-
     width: 561px;
-    padding: 0;
-    padding-right: 42px;
+  }
+
+  .program-form__field--contacts .program-form__field-empty {
+    position: relative;
+    z-index: 10;
+
     padding-left: 38px;
+    padding-right: 43px;
     margin-left: -38px;
 
     background-color: #ffffff;
-
-    &::after {
-      top: 59%;
-    }
-
-    &::before {
-      top: 59%;
-    }
   }
 
   .program-form__wrapper-contacts {
-    margin-top: 70px;
+    margin-top: 74px;
   }
 
   .program-form__field--contacts .program-form__field-input {
@@ -551,22 +576,18 @@
   }
 
   .program-form__field--comment .program-form__field-title {
-    font-size: 36px;
-
     width: 257px;
-    padding: 0 40px;
+  }
+
+  .program-form__field--comment .program-form__field-empty {
+    position: relative;
+    z-index: 10;
+
+    padding-left: 39px;
+    padding-right: 40px;
     margin-left: -30px;
-    margin-bottom: 76px;
 
     background-color: #ffffff;
-
-    &::before {
-      top: 62%;
-    }
-
-    &::after {
-      top: 62%;
-    }
   }
 
   .program-form__field-textarea {
@@ -587,20 +608,17 @@
 
   .program-form__field--extra .program-form__field-title {
     width: 289px;
-    font-size: 36px;
+  }
+
+  .program-form__field--extra .program-form__field-empty {
+    position: relative;
+    z-index: 10;
+
+    padding-left: 39px;
     padding-right: 42px;
-    padding-left: 40px;
-    margin-left: -1px;
+    margin-left: 0;
 
     background-color: #ffffff;
-
-    &::before {
-      top: 55%;
-    }
-
-    &::after {
-      top: 55%;
-    }
   }
 
   .program-form__wrapper-extra {
@@ -687,6 +705,13 @@
     margin-bottom: 42px;
   }
 
+  .program-form__field-empty {
+    position: relative;
+    padding-left: 37px;
+    padding-right: 39px;
+    margin-left: -38px;
+  }
+
   .program-form__wrapper-info {
     display: flex;
 
@@ -716,17 +741,13 @@
     padding-bottom: 0;
   }
 
+
+  // Users contacts
   .program-form__field--contacts {
     width: 1260px;
     padding-left: 0;
     padding-right: 40px;
     margin-bottom: 48px;
-  }
-
-  .program-form__field--contacts .program-form__field-title {
-    padding: 0 40px;
-    margin-left: -41px;
-    margin-bottom: 75px;
   }
 
   .program-form__wrapper-contacts {
@@ -750,17 +771,12 @@
     left: 536px;
   }
 
+  // Comment
   .program-form__field--comment {
     width: 1260px;
     margin: auto;
     padding-left: 0;
     margin-bottom: 53px;
-  }
-
-  .program-form__field--comment .program-form__field-title {
-    padding: 0 40px;
-    margin-left: -40px;
-    margin-bottom: 75px;
   }
 
   .program-form__field-textarea {
@@ -770,16 +786,21 @@
     margin-left: 0;
   }
 
+  .program-form__field--comment .program-form__field-empty {
+    position: relative;
+    z-index: 10;
+
+    padding-left: 38px;
+    padding-right: 39px;
+    margin-left: -39px;
+
+    background-color: #ffffff;
+  }
+
   // Additional info
   .program-form__field--extra {
     width: 1260px;
     margin: auto;
-  }
-
-  .program-form__field--extra .program-form__field-title {
-    padding: 0 40px;
-    margin-left: -41px;
-    margin-bottom: 66px;
   }
 
   .program-form__wrapper-extra {
@@ -787,6 +808,17 @@
 
     margin-left: 13px;
     margin-bottom: 5px;
+  }
+
+  .program-form__field--extra .program-form__field-empty {
+    position: relative;
+    z-index: 10;
+
+    padding-left: 39px;
+    padding-right: 42px;
+    margin-left: -40px;
+
+    background-color: #ffffff;
   }
 
   .program-form__field-label--extra {

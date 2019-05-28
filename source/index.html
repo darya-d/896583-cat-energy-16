@@ -25,7 +25,7 @@
             </a>
             <button class="burger burger--opened" type="button" aria-label="Открыть главное меню"></button>
           </div>
-          <nav class="main-nav main-nav--show">
+          <nav class="main-nav main-nav--no-js">
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--active">
                 <a class="main-nav__item-link" href="#">Главная</a>
@@ -200,12 +200,12 @@
       var burger = document.querySelector(".burger");
 
       document.addEventListener("DOMContentLoaded", function() {
-        nav.classList.remove("main-nav--show");
+        nav.classList.remove("main-nav--no-js");
         burger.classList.add("burger--opened");
       });
 
       burger.addEventListener("click", function (evt) {
-        nav.classList.toggle("main-nav--show");
+        nav.classList.toggle("main-nav--no-js");
         burger.classList.toggle("burger--opened");
       });
     </script>

@@ -25,7 +25,7 @@
             </a>
             <button class="burger burger--opened" type="button" aria-label="Открыть главное меню"></button>
           </div>
-          <nav class="main-nav">
+          <nav class="main-nav main-nav--no-js">
             <ul class="main-nav__list">
               <li class="main-nav__item">
                 <a class="main-nav__item-link" href="index.html">Главная</a>
@@ -200,7 +200,7 @@
               <div class="catalog__wrapper">
                 <a class="catalog__img" href="buckwheat-slim500.html">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-small-desktop@1x.webp 1x, img/buckwheat-small-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/buckwheat-small-desktop@1x.webp 1x, img/buckwheat-small-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-small-tablet@1x.webp 1x, img/buckwheat-small-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/buckwheat-small-mobile@1x.webp 1x, img/buckwheat-small-mobile@2x.webp 2x">
 
@@ -235,7 +235,7 @@
               <div class="catalog__wrapper">
                 <a class="catalog__img" href="buckwheat-slim1000.html">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/buckwheat-big-desktop@1x.webp 1x, img/buckwheat-big-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/buckwheat-big-desktop@1x.webp 1x, img/buckwheat-big-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/buckwheat-big-tablet@1x.webp 1x, img/buckwheat-big-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/buckwheat-big-mobile@1x.webp 1x, img/buckwheat-big-mobile@2x.webp 2x">
 
@@ -271,7 +271,7 @@
               <div class="catalog__wrapper">
                 <a class="catalog__img" href="rice-slim500.html">
                   <picture>
-                    <source type="image/webp" media="(min-width: 1300px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/rice-small-desktop@1x.webp 1x, img/rice-small-desktop@2x.webp 2x">
                     <source type="image/webp" media="(min-width: 768px)" srcset="img/rice-small-tablet@1x.webp 1x, img/rice-small-tablet@2x.webp 2x">
                     <source type="image/webp" srcset="img/rice-small-mobile@1x.webp 1x, img/rice-small-mobile@2x.webp 2x">
 
@@ -315,8 +315,8 @@
       </div>
         <!-- Extra products -->
       <div class="container">
-        <section class="catalog__extra-products extra-products">
-          <h2 class="extra-products__title">Дополнительные товары</h2>
+        <section class="extra-products">
+          <h2 class="extra-products__title"><span class="extra-products__empty">Дополнительные товары</span></h2>
           <div class="extra-products__wrapper">
             <ul class="extra-products__list">
               <li class="extra-products__item">
@@ -401,7 +401,6 @@
         </div>
         <iframe class="address__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1552167273582" style="border:0" height="400" allowfullscreen></iframe>
       </section>
-      </div>
     </main>
 
     <footer class="page-footer">
@@ -449,12 +448,12 @@
       var burger = document.querySelector(".burger");
 
       document.addEventListener("DOMContentLoaded", function() {
-        nav.classList.remove("main-nav--show");
+        nav.classList.remove("main-nav--no-js");
         burger.classList.add("burger--opened");
       });
 
       burger.addEventListener("click", function (evt) {
-        nav.classList.toggle("main-nav--show");
+        nav.classList.toggle("main-nav--no-js");
         burger.classList.toggle("burger--opened");
       });
     </script>
