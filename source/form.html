@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Cat energy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="fonts/oswaldmedium.woff2" rel="preload">
+    <link href="fonts/oswaldregular.woff2" rel="preload">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
@@ -130,7 +132,7 @@
             </div>
             <!-- Send a request button -->
             <div class="program-form__wrapper-request">
-              <button class="program-form__button-submit button">Отправить заявку</button>
+              <button class="program-form__button-submit button" type="submit">Отправить заявку</button>
               <span class="program-form__request"><sup>*</sup> — Обязательные поля</span>
             </div>
           </form>
@@ -188,22 +190,23 @@
           <div class="copyright">
             <a class="copyright__company-name" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive" title="Логотип HTML Academy">
-              <svg width="40" height="40"><use xlink:href="#htmlacademy"></use></svg>
+              <svg width="40" height="40"><use xlink:href="#icon-htmlacademy"></use></svg>
             </a>
           </div>
         </div>
       </div>
     </footer>
+    <script src="js/picturefill.min.js" async=""></script>
     <script>
       var nav = document.querySelector(".main-nav");
       var burger = document.querySelector(".burger");
 
-      document.addEventListener("DOMContentLoaded", function(event) {
+      document.addEventListener("DOMContentLoaded", function() {
         nav.classList.remove("main-nav--no-js");
         burger.classList.add("burger--opened");
       });
 
-      burger.addEventListener("click", function(event) {
+      burger.addEventListener("click", function (evt) {
         nav.classList.toggle("main-nav--no-js");
         burger.classList.toggle("burger--opened");
       });

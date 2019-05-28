@@ -9,6 +9,8 @@
 .program-form__field {
   display: block;
 
+  box-sizing: border-box;
+
   padding: 0;
   padding-bottom: 9px;
   margin: 0;
@@ -90,6 +92,8 @@
   display: flex;
   align-items: center;
 
+  box-sizing: border-box;
+
   margin-bottom: 11px;
 
   color: #222222;
@@ -121,6 +125,8 @@
 }
 
 .program-form__field-input {
+  box-sizing: border-box;
+
   padding: 14px;
   margin-left: 16px;
   flex-grow: 1;
@@ -216,18 +222,19 @@
   margin: auto;
 }
 
-.program-form__field-title {
-  width: 230px;
-  padding: 0;
+.program-form__field--contacts .program-form__field-empty {
+  padding-right: 46px;
+
+  background-color: transparent;
+}
+
+.program-form__field--contacts .program-form__field-title {
+  width: 227px;
 
   &::after {
     content: "";
     top: 32%;
   }
-}
-
-.program-form__field--contacts .program-form__field-empty {
-  padding-right: 46px;
 }
 
 .program-form__field--contacts .program-form__field-input {
@@ -256,6 +263,8 @@
   font-size: 16px;
   text-transform: uppercase;
 
+  box-sizing: border-box;
+
   width: 280px;
   padding: 9px 10px 19px 15px;
   margin-top: 31px;
@@ -281,7 +290,6 @@
 }
 
 .program-form__field--extra .program-form__field-title {
-  width: 185px;
   margin-bottom: 41px;
 
   background-color: #ffffff;
@@ -538,6 +546,11 @@
 
   .program-form__field--contacts .program-form__field-title {
     width: 561px;
+
+    &::after {
+      content: "";
+      top: 63%;
+    }
   }
 
   .program-form__field--contacts .program-form__field-empty {
@@ -577,6 +590,14 @@
 
   .program-form__field--comment .program-form__field-title {
     width: 257px;
+
+    &::before {
+      top: 63%;
+    }
+
+    &::after {
+      top: 63%;
+    }
   }
 
   .program-form__field--comment .program-form__field-empty {
@@ -584,7 +605,7 @@
     z-index: 10;
 
     padding-left: 39px;
-    padding-right: 40px;
+    padding-right: 17px;
     margin-left: -30px;
 
     background-color: #ffffff;
@@ -607,7 +628,9 @@
   }
 
   .program-form__field--extra .program-form__field-title {
-    width: 289px;
+    &::after {
+      top: 63%;
+    }
   }
 
   .program-form__field--extra .program-form__field-empty {
@@ -791,7 +814,7 @@
     z-index: 10;
 
     padding-left: 38px;
-    padding-right: 39px;
+    padding-right: 17px;
     margin-left: -39px;
 
     background-color: #ffffff;
